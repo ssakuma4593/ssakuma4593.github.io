@@ -1,4 +1,5 @@
-name: I'm Satoe Sakuma
+title: I'm Satoe Sakuma
 markdown: kramdown
+email: satoesakuma@gmail.com
 
 permalink: /tech-blog/:year/:month/:day/:title
