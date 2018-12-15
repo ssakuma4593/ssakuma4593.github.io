@@ -1,2 +1,4 @@
 name: I'm Satoe Sakuma
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
