@@ -1,5 +1,5 @@
 ---
-title: How She Got There: Wayfair Engineering
+title: How She Got There - Wayfair Engineering
 subtitle: Women in Tech
 layout: default
 modal-id: 1
