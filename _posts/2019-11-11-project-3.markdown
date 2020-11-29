@@ -2,7 +2,7 @@
 title: Cambridge Half Marathon
 subtitle: Hobbies
 layout: default
-modal-id: 3
+modal-id: 1
 date: 2019-11-11
 img: half.png
 thumbnail: half-thumbnail.png

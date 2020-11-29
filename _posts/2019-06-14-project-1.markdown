@@ -2,7 +2,7 @@
 title: Creative Coffee Solution
 subtitle: Office Efficiency
 layout: default
-modal-id: 1
+modal-id: 2
 date: 2019-06-14
 img: coffeesolution.png
 thumbnail: coffeesolution-thumbnail.png
