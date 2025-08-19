@@ -1,3 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss/utilities";
 
-/* Your custom styles can go here */
+/* Preserve existing timeline and Bootstrap styles */
+/* Your custom Tailwind utilities can go here */
