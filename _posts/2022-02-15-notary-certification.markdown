@@ -8,6 +8,6 @@ img: notary-certificate.png
 thumbnail: notary-certificate-thumbnail.png
 alt: Massachusetts Notary Public Certificate
 project-date: February 2022
-description: In February 2022, I became a certified Notary Public in the Commonwealth of Massachusetts. This accomplishment represents my commitment to expanding my professional services and maintaining the highest standards of integrity and attention to detail. As a notary, I can authenticate documents, administer oaths, and provide crucial legal services to clients and colleagues. The certification process required studying Massachusetts notary laws, understanding proper procedures for document verification, and demonstrating knowledge of legal requirements. This achievement allows me to bridge my technical expertise with legal services, providing additional value in both personal and professional contexts. I take pride in being entrusted with this responsibility and the role it plays in facilitating important legal and business transactions.
+description: In February 2022, I became a certified Notary Public in the Commonwealth of Massachusetts because why not. I found myself in situations where someone I knew would be looking for a notary, so I looked into what it took be be a notary to be able to say "Oh, I can do that" in a moment of need. The hardest part was finding a lawyer to confirm that I am a good person because I don't know any practicing lawyers in the state of MA.
 
 ---
