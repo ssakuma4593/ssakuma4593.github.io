@@ -1,1 +1,8 @@
 _site/
+node_modules/
+.DS_Store
+npm-debug.log*
+*.tgz
+.npm
+.eslintcache
+package-lock.json
