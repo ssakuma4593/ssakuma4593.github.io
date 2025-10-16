@@ -1,6 +1,6 @@
 ---
 title: Medical Research Gap Analysis Tool
-subtitle: AI-Powered Research Analytics
+subtitle: AI/ML
 layout: default
 modal-id: 1
 date: 2025-10-16
