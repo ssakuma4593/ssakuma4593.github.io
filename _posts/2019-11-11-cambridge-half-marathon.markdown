@@ -2,7 +2,7 @@
 title: Cambridge Half Marathon
 subtitle: Life
 layout: default
-modal-id: 3
+modal-id: 2
 date: 2019-11-11
 img: half.png
 thumbnail: half-thumbnail.png

@@ -50,27 +50,53 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="reflection-posts">
-                    <!-- This section can be populated with blog posts or updates about grad school -->
+                    <!-- Collapsible reflection posts -->
                     <div class="reflection-post">
-                        <h5>Setting Up for Success</h5>
-                        <p class="text-muted small">October 2025</p>
-                        <p class="text-muted">
-                            Starting the MPH program has been both exciting and overwhelming. The transition from industry back to academia 
-                            requires a different mindset, but the diversity of perspectives from my classmates - from clinicians to 
-                            policy makers to researchers - creates an incredibly rich learning environment.
-                        </p>
+                        <div class="reflection-header" onclick="toggleReflection('reflection1')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+                            <h5 style="margin: 0; display: inline-block;">Setting Up for Success</h5>
+                            <span id="reflection1-icon" style="float: right; font-weight: bold;">▼</span>
+                            <p class="text-muted small" style="margin: 5px 0 0 0;">October 2025</p>
+                        </div>
+                        <div id="reflection1-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;">
+                            <p class="text-muted">
+                                Starting the MPH program has been both exciting and overwhelming. The transition from industry back to academia 
+                                requires a different mindset, but the diversity of perspectives from my classmates - from clinicians to 
+                                policy makers to researchers - creates an incredibly rich learning environment.
+                            </p>
+                        </div>
                     </div>
                     
-                    <div class="reflection-post" style="margin-top: 30px;">
-                        <h5>The Power of Systems Thinking</h5>
-                        <p class="text-muted small">September 2025</p>
-                        <p class="text-muted">
-                            One of the biggest shifts in thinking has been moving from individual patient care (the focus at Firefly) 
-                            to population health. Understanding how interventions can impact entire communities requires a completely 
-                            different framework for thinking about problems and solutions.
-                        </p>
+                    <div class="reflection-post" style="margin-top: 20px;">
+                        <div class="reflection-header" onclick="toggleReflection('reflection2')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+                            <h5 style="margin: 0; display: inline-block;">The Power of Systems Thinking</h5>
+                            <span id="reflection2-icon" style="float: right; font-weight: bold;">▼</span>
+                            <p class="text-muted small" style="margin: 5px 0 0 0;">September 2025</p>
+                        </div>
+                        <div id="reflection2-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;">
+                            <p class="text-muted">
+                                One of the biggest shifts in thinking has been moving from individual patient care (the focus at Firefly) 
+                                to population health. Understanding how interventions can impact entire communities requires a completely 
+                                different framework for thinking about problems and solutions.
+                            </p>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- JavaScript for toggle functionality -->
+                <script>
+                    function toggleReflection(id) {
+                        const content = document.getElementById(id + '-content');
+                        const icon = document.getElementById(id + '-icon');
+                        
+                        if (content.style.display === 'none' || content.style.display === '') {
+                            content.style.display = 'block';
+                            icon.textContent = '▲';
+                        } else {
+                            content.style.display = 'none';
+                            icon.textContent = '▼';
+                        }
+                    }
+                </script>
             </div>
         </div>
     </div>
