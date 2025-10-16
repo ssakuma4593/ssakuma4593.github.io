@@ -1,0 +1,15 @@
+---
+title: Medical Research Gap Analysis Tool
+subtitle: AI-Powered Research Analytics
+layout: default
+modal-id: 1
+date: 2025-10-16
+img: gap-cloud.png
+thumbnail: gap-cloud-thumbnail.png
+alt: Medical Research Gap Analysis Tool
+project-date: October 2025
+client: GitHub Repository
+client-link: https://github.com/ssakuma4593/gap_cloud
+description: A sophisticated Python-based tool that analyzes research gaps in medical literature using AWS S3, BERTopic, and interactive visualizations. This project loads medical research abstracts from AWS S3, employs advanced topic modeling with BERTopic for research gap analysis, and generates five types of interactive HTML visualizations including topic overview scatter plots, keyword relevance bar charts, similarity heatmaps, document distributions, and topic hierarchy views. The tool features enhanced text processing with 200+ medical/research stop words for better topic extraction, complete pipeline automation from S3 to visualizations, CSV export capabilities, and security-first design with environment variable-based credential management. It successfully identifies meaningful medical research themes like Cognitive Robotics & AI, Cardiovascular Medicine, Drug Discovery, Ophthalmology, Dental AI, and Medical Imaging, helping researchers identify cross-disciplinary opportunities and research gaps in the medical AI field.
+
+---
