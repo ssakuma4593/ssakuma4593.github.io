@@ -15,3 +15,31 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Portfolio Filter JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Portfolio filtering functionality
+            $('.filter-btn').click(function() {
+                var filter = $(this).data('filter');
+                
+                // Update active button
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                // Show/hide portfolio items based on filter
+                if (filter === 'all') {
+                    $('.portfolio-item').removeClass('hidden');
+                } else {
+                    $('.portfolio-item').each(function() {
+                        var categories = $(this).data('category');
+                        if (categories && categories.indexOf(filter) !== -1) {
+                            $(this).removeClass('hidden');
+                        } else {
+                            $(this).addClass('hidden');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
