@@ -1,0 +1,175 @@
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Projects</h2>
+                <h3 class="section-subheading text-muted">Technical Projects & Innovations</h3>
+            </div>
+        </div>
+        
+        <!-- Filter tabs for different project types -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="project-filters" style="margin-bottom: 40px;">
+                    <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>
+                    <button class="btn btn-outline filter-btn" data-filter="tech">Technical</button>
+                    <button class="btn btn-outline filter-btn" data-filter="health">Healthcare</button>
+                    <button class="btn btn-outline filter-btn" data-filter="creative">Creative</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Healthcare Technology Projects -->
+            <div class="col-md-4 col-sm-6 project-item" data-category="tech health">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-heartbeat fa-3x" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h4>Healthcare Operations Platform</h4>
+                        <p class="text-muted">Led development of operations tools at Firefly Health to empower clinicians and improve patient care efficiency. Built workflows that reduced administrative burden by 40%.</p>
+                        <div class="project-tags">
+                            <span class="badge">React</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Healthcare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 project-item" data-category="tech">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-truck fa-3x" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h4>Delivery Route Optimization</h4>
+                        <p class="text-muted">Developed carrier input application for Wayfair's routing algorithm, enabling third-party carriers to optimize delivery routes and improve efficiency by 25%.</p>
+                        <div class="project-tags">
+                            <span class="badge">Algorithms</span>
+                            <span class="badge">Optimization</span>
+                            <span class="badge">Logistics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 project-item" data-category="tech">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-battery-full fa-3x" style="color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h4>Battery Research Data Platform</h4>
+                        <p class="text-muted">Created interactive data visualization platform for Samsung Research America's battery team, enabling digital experiments and crystallography data analysis.</p>
+                        <div class="project-tags">
+                            <span class="badge">WebGL</span>
+                            <span class="badge">Data Viz</span>
+                            <span class="badge">Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add the existing creative projects -->
+            <div class="col-md-4 col-sm-6 project-item" data-category="creative">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/portfolio/coffeesolution-thumbnail.png" class="img-responsive" alt="Coffee Solution">
+                    </div>
+                    <div class="project-content">
+                        <h4>Creative Coffee Solution</h4>
+                        <p class="text-muted">Magnetic spice rack solution for organizing coffee subscription bags and Kalita Wave equipment in a small office space.</p>
+                        <div class="project-tags">
+                            <span class="badge">Problem Solving</span>
+                            <span class="badge">Office Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to action -->
+        <div class="row">
+            <div class="col-lg-12 text-center" style="margin-top: 50px;">
+                <p class="text-muted">
+                    Interested in collaborating or learning more about any of these projects? 
+                    <a href="mailto:satoesakuma@gmail.com">Let's connect!</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add some custom CSS for the project cards -->
+<style>
+.project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    margin-top: 15px;
+}
+
+.project-tags .badge {
+    background-color: #3498db;
+    color: white;
+    padding: 4px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    font-size: 0.75em;
+}
+
+.project-filters .filter-btn {
+    margin: 0 5px;
+    border: 1px solid #3498db;
+    color: #3498db;
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-filters .filter-btn.active,
+.project-filters .filter-btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.project-item {
+    transition: opacity 0.3s ease;
+}
+
+.project-item.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+</style>
