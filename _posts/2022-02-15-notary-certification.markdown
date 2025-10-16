@@ -1,8 +1,8 @@
 ---
 title: Massachusetts Notary Public
-subtitle: Professional Certification
+subtitle: Life
 layout: default
-modal-id: 4
+modal-id: 2
 date: 2022-02-15
 img: notary-certificate.png
 thumbnail: notary-certificate-thumbnail.png
