@@ -1,20 +1,185 @@
 ---
-layout: default
+layout: timeline
+title: "Interactive Timeline Portfolio"
+description: "Explore my journey from software engineering to public health policy through an interactive timeline experience."
 ---
 
-<div class="home">
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('{{ '/img/header-bg.jpg' | relative_url }}');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Satoe Sakuma</h1>
+        <p>Transforming healthcare through technology. Explore my journey from software engineering to shaping healthcare innovation.</p>
+    </div>
+    <div class="scroll-indicator">
+        <span>Explore my journey</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</section>
 
-  <h1>Posts</h1>
+<!-- Interactive Timeline Section -->
+<section class="timeline-section" id="timeline">
+    <div class="timeline-container">
+        <div class="timeline-header">
+            <h2>My Journey</h2>
+            <p>Click on any period to explore projects, reflections, and key milestones from that time</p>
+        </div>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+        <!-- Horizontal Timeline -->
+        <div class="timeline-wrapper" id="timelineWrapper">
+            <div class="timeline-track">
+                <div class="timeline-progress" id="timelineProgress"></div>
+            </div>
+            
+            <div class="timeline-items" id="timelineItems">
+                {% for item in site.data.timeline %}
+                <div class="timeline-item {{ item.status }}" data-period="{{ item.id }}">
+                    <div class="timeline-logo">
+                        <img src="{{ item.logo | relative_url }}" alt="{{ item.title }}" loading="lazy">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">{{ item.period }}</div>
+                        <div class="timeline-title">{{ item.title }}</div>
+                        <div class="timeline-subtitle">{{ item.subtitle }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="timeline-scroll-hint">
+            Scroll or click to explore different periods
+        </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <!-- Expandable Content Areas -->
+        {% for item in site.data.timeline %}
+        <div class="content-area{% if item.status == 'active' %} active{% endif %}" id="content-{{ item.id }}">
+            <div class="content-grid">
+                <div class="content-main fade-in">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                    <p>{{ item.details }}</p>
+                    <div class="content-actions">
+                        {% for action in item.actions %}
+                        <a href="{{ action.url }}" class="btn btn-{{ action.type }}">
+                            {{ action.label }} →
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="content-sidebar slide-in-right">
+                    <h4>{{ item.sidebar.title }}</h4>
+                    <ul class="sidebar-list">
+                        {% for sidebar_item in item.sidebar.items %}
+                        <li>
+                            {% if sidebar_item.expandable %}
+                                <span class="expandable-item" data-expandable="true">{{ sidebar_item.title }}</span>
+                                <span class="sidebar-tag">{{ sidebar_item.tag }}</span>
+                            {% elsif sidebar_item.url %}
+                                <a href="{{ sidebar_item.url }}">{{ sidebar_item.title }}</a>
+                                <span class="sidebar-tag">{{ sidebar_item.tag }}</span>
+                            {% else %}
+                                <span>{{ sidebar_item.title }}</span>
+                                <span class="sidebar-tag">{{ sidebar_item.tag }}</span>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Expandable content sections below the sidebar -->
+            {% for sidebar_item in item.sidebar.items %}
+                {% if sidebar_item.expandable %}
+                <div class="expandable-content-section" id="expandable-{{ item.id }}-{{ forloop.index }}" style="display: none;">
+                    <div class="expandable-content-text">
+                        {{ sidebar_item.content }}
+                    </div>
+                    {% if sidebar_item.images %}
+                    <div class="expandable-images">
+                        {% for image in sidebar_item.images %}
+                        <div class="expandable-image">
+                            <img src="{{ image.url | relative_url }}" alt="{{ image.caption }}" loading="lazy">
+                            <p class="image-caption">{{ image.caption }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% if sidebar_item.actions %}
+                    <div class="expandable-actions">
+                        {% for action in sidebar_item.actions %}
+                        <a href="{{ action.url }}" class="btn btn-{{ action.type }}" target="_blank" rel="noopener noreferrer">
+                            {{ action.label }} →
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
 
+<!-- Sidequest Section -->
+<section class="sidequest-section" id="sidequest">
+    <div class="sidequest-container">
+        <div class="sidequest-header">
+            <h2>Sidequest</h2>
+            <p>Personal projects and achievements beyond the main journey</p>
+        </div>
+        
+        <div class="photo-collage">
+            <div class="collage-item collage-item-large" data-modal="half-marathon">
+                <img src="img/portfolio/half-thumbnail.png" alt="Cambridge Half Marathon" loading="lazy">
+                <div class="collage-overlay">
+                    <h3>Cambridge Half Marathon</h3>
+                    <p>Running Achievement</p>
+                </div>
+            </div>
+            
+            <div class="collage-item collage-item-small" data-modal="notary">
+                <img src="img/portfolio/notary-certificate-thumbnail.png" alt="Notary Certification" loading="lazy">
+                <div class="collage-overlay">
+                    <h3>Notary Certification</h3>
+                    <p>Professional Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Half Marathon -->
+<div class="modal" id="modal-half-marathon">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="img/portfolio/half.png" alt="Cambridge Half Marathon" loading="lazy">
+            </div>
+            <div class="modal-text">
+                <h3>Cambridge Half Marathon</h3>
+                <p>Completed the Cambridge Half Marathon as a personal challenge to maintain physical fitness and mental resilience during my career transition. This achievement represents the importance of setting and accomplishing personal goals alongside professional development.</p>
+                <p>Running has been a constant companion throughout my journey, providing mental clarity and stress relief during demanding periods in both my software engineering and public health studies.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Notary -->
+<div class="modal" id="modal-notary">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="img/portfolio/notary-certificate.png" alt="Notary Certification" loading="lazy">
+            </div>
+            <div class="modal-text">
+                <h3>Notary Public Certification</h3>
+                <p>Obtained notary public certification to expand my professional skill set and provide valuable services to my community. This certification demonstrates my commitment to legal compliance, attention to detail, and public service.</p>
+                <p>The process involved studying state regulations, passing examinations, and understanding the legal responsibilities of notarizing documents, adding another dimension to my diverse skill portfolio.</p>
+            </div>
+        </div>
+    </div>
 </div>

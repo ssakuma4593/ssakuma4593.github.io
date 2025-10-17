@@ -1,5 +1,49 @@
+# Site settings
 title: Satoe Sakuma
-markdown: kramdown
 email: satoesakuma@gmail.com
+description: "Transforming healthcare through technology innovation. Explore my journey from software engineering to public health policy."
+baseurl: ""
+url: "https://ssakuma4593.github.io"
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
 permalink: /tech-blog/:year/:month/:day/:title
+
+# Collections
+collections:
+  timeline:
+    output: false
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass/SCSS configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .cache
+  - .DS_Store
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - src
+  - mockup*.html
+  - design-comparison.html
+
+# Include
+include:
+  - _pages

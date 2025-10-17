@@ -1,0 +1,241 @@
+- id: imsa
+  period: "2011-2015"
+  title: "IMSA"
+  subtitle: "Illinois Math & Science Academy"
+  status: completed
+  logo: "img/about/imsa.jpg"
+  description: "Attended the Illinois Mathematics and Science Academy, a prestigious residential high school for academically gifted students interested in mathematics, science, and technology."
+  details: "This formative experience shaped my analytical thinking and introduced me to advanced STEM concepts that would become the foundation of my career."
+  actions:
+    - label: "Learn About IMSA"
+      url: "#education"
+      type: primary
+    - label: "STEM Foundation"
+      url: "#stem"
+      type: secondary
+  sidebar:
+    title: "Academic Focus"
+    items:
+      - title: "Advanced Mathematics"
+        tag: "Math"
+      - title: "Computer Science"
+        tag: "CS"
+      - title: "Research Projects"
+        tag: "Research"
+      - title: "STEM Leadership"
+        tag: "Leadership"
+
+- id: gpa
+  period: "2015-2017"
+  title: "Gap Years"
+  subtitle: "Exploration & Growth"
+  status: completed
+  logo: "img/about/gpa.jpg"
+  description: "Took time to explore interests, gain real-world experience, and prepare for the next phase of education and career development."
+  details: "These years provided valuable perspective and helped clarify my passion for technology and its potential to solve real-world problems."
+  actions:
+    - label: "Gap Year Insights"
+      url: "#gap-years"
+      type: primary
+    - label: "Personal Growth"
+      url: "#growth"
+      type: secondary
+  sidebar:
+    title: "Key Experiences"
+    items:
+      - title: "Self-Directed Learning"
+        tag: "Learning"
+      - title: "Real-World Experience"
+        tag: "Experience"
+      - title: "Career Exploration"
+        tag: "Exploration"
+      - title: "Personal Development"
+        tag: "Growth"
+
+- id: bu
+  period: "2017-2021"
+  title: "Boston University"
+  subtitle: "Computer Science"
+  status: completed
+  logo: "img/about/bu.jpg"
+  description: "Studied Computer Science at Boston University, developing strong technical foundations while leading Women in CS initiatives to promote diversity in technology."
+  details: "Gained comprehensive understanding of software engineering principles and discovered my passion for using technology to create positive social impact."
+  actions:
+    - label: "Academic Projects"
+      url: "#bu-projects"
+      type: primary
+    - label: "Women in CS Leadership"
+      url: "#diversity"
+      type: secondary
+  sidebar:
+    title: "University Highlights"
+    items:
+      - title: "Computer Science Degree"
+        tag: "CS"
+      - title: "Women in CS Leadership"
+        tag: "Leadership"
+      - title: "Technical Projects"
+        tag: "Projects"
+      - title: "Academic Excellence"
+        tag: "Academics"
+
+- id: samsung
+  period: "2020"
+  title: "Samsung Research"
+  subtitle: "Research Intern"
+  status: completed
+  logo: "img/about/samsung.jpg"
+  description: "Conducted research at Samsung Research America, gaining experience in cutting-edge technology development and corporate research environments."
+  details: "This internship provided insights into large-scale technology research and development, influencing my understanding of innovation in tech companies."
+  actions:
+    - label: "Research Experience"
+      url: "#samsung-research"
+      type: primary
+    - label: "Innovation Projects"
+      url: "#innovation"
+      type: secondary
+  sidebar:
+    title: "Research Areas"
+    items:
+      - title: "Technology Research"
+        tag: "Research"
+      - title: "Innovation Development"
+        tag: "Innovation"
+      - title: "Corporate Environment"
+        tag: "Corporate"
+      - title: "R&D Experience"
+        tag: "R&D"
+
+- id: wayfair
+  period: "2019-2021"
+  title: "Wayfair Inc."
+  subtitle: "Software Engineer" 
+  status: completed
+  logo: "img/about/wayfair.jpg"
+  description: "Started my professional career in e-commerce technology, developing and optimizing platform features that served millions of customers. Gained foundational experience in large-scale systems and customer-focused product development."
+  details: "This role taught me the importance of user experience and data-driven decision making, principles that would later influence my approach to healthcare technology. During this time, I organized 'How She Got There' - a speaker series featuring women in tech sharing their career journeys and inspiring the next generation of female engineers."
+  actions:
+    - label: "View Early Projects"
+      url: "#projects"
+      type: primary
+    - label: "Technical Stack"
+      url: "#tech-stack"
+      type: secondary
+  sidebar:
+    title: "Technologies & Skills"
+    items:
+      - title: "E-commerce Platform"
+        tag: "Web Dev"
+      - title: "Customer Experience" 
+        tag: "UX"
+      - title: "Large Scale Systems"
+        tag: "Architecture"
+      - title: "Data Analytics"
+        tag: "Analytics"
+      - title: "How She Got There Event"
+        tag: "Leadership"
+        expandable: true
+        content: |
+          A speaker series I organized featuring women in tech sharing their career journeys and inspiring the next generation of female engineers. The event brought together diverse voices from different backgrounds in technology to create an inclusive space for learning and networking.
+        
+          Key speakers included engineers from various companies who shared their unique paths into tech, challenges they overcame, and advice for aspiring technologists. The event fostered community building and mentorship opportunities within the tech ecosystem.
+        images:
+          - url: "img/portfolio/howshegotthere.png"
+            caption: "Event promotional materials and speaker lineup"
+          - url: "img/portfolio/howshegotthere-thumbnail.png" 
+            caption: "Behind the scenes from the event"
+
+- id: firefly
+  period: "2021-2025"
+  title: "Firefly Health"
+  subtitle: "Operations Lead"
+  status: completed
+  logo: "img/about/firefly.jpg"
+  description: "Joined as the first IC engineer at this healthcare startup with a mission to make healthcare twice as good for half the cost. Led the Operations, Navigation, and Health Plan team working alongside providers to tech-empower convenient, continuous care."
+  details: "Built systems and processes that enabled personalized, proactive healthcare delivery while maintaining the human connection that's essential to quality care."
+  actions:
+    - label: "View Healthcare Projects"
+      url: "#healthcare-projects"
+      type: primary
+    - label: "Technical Achievements"
+      url: "#achievements"
+      type: secondary
+  sidebar:
+    title: "Key Projects"
+    items:
+      - title: "Patient Care Workflows"
+        tag: "Healthcare"
+      - title: "Operations Automation"
+        tag: "DevOps"
+      - title: "Clinical Integration"
+        tag: "Healthcare Tech"
+
+- id: harvard
+  period: "2025-2026"
+  title: "Harvard MPH"
+  subtitle: "Public Health"
+  status: active
+  logo: "img/about/harvard.jpg"
+  description: "Currently pursuing Master of Public Health with a focus on health policy and technology integration. Exploring how digital health solutions can address systemic healthcare challenges and improve population health outcomes."
+  details: "This journey represents a pivot from hands-on technology development to understanding policy frameworks that can scale healthcare innovations responsibly and equitably."
+  actions:
+    - label: "Read Grad School Reflections"
+      url: "/grad-reflections/"
+      type: primary
+    - label: "View Coursework"
+      url: "#coursework"
+      type: secondary
+  sidebar:
+    title: "Current Focus Areas"
+    items:
+      - title: "GAP Cloud Platform"
+        tag: "Cloud"
+        expandable: true
+        content: |
+          A cloud-based platform designed to bridge the gap between healthcare data silos and actionable insights. This project explores how modern cloud infrastructure can enable secure, scalable healthcare data analytics while maintaining patient privacy and regulatory compliance.
+          
+          The platform demonstrates the potential for cloud technologies to democratize access to healthcare analytics, enabling smaller healthcare organizations to leverage powerful data processing capabilities without massive infrastructure investments.
+          
+          Key features include automated data pipeline management, HIPAA-compliant storage solutions, and intuitive dashboards for healthcare administrators to derive meaningful insights from their patient data.
+        images:
+          - url: "img/portfolio/gap-cloud.png"
+            caption: "GAP Cloud Platform architecture and user interface"
+          - url: "img/portfolio/gap-cloud-thumbnail.png"
+            caption: "Data visualization dashboard showing healthcare analytics"
+        actions:
+          - label: "View Code on GitHub"
+            url: "https://github.com/ssakuma4593/gap_cloud"
+            type: "primary"
+      - title: "Digital Health Strategy"
+        tag: "Tech"
+      - title: "Healthcare Equity"
+        tag: "Social Impact"
+      - title: "Population Health"
+        tag: "Research"
+
+- id: future
+  period: "2026+"
+  title: "What's Next"
+  subtitle: "Healthcare Innovation"
+  status: future
+  logo: "https://via.placeholder.com/120x120/3b82f6/ffffff?text=?"
+  description: "Combining technical expertise with public health knowledge to tackle systemic healthcare challenges. Focused on developing and implementing technology solutions that improve care quality while reducing costs."
+  details: "Interested in policy frameworks that enable responsible innovation, especially in digital health, AI applications in healthcare, and equitable access to quality care."
+  actions:
+    - label: "Let's Collaborate"
+      url: "mailto:satoesakuma@gmail.com"
+      type: primary
+    - label: "Research Interests"
+      url: "#research"
+      type: secondary
+  sidebar:
+    title: "Areas of Interest"
+    items:
+      - title: "Digital Health Policy"
+        tag: "Policy"
+      - title: "AI in Healthcare"
+        tag: "AI/ML"
+      - title: "Health Equity Tech"
+        tag: "Social Impact"
+      - title: "Healthcare Innovation"
+        tag: "Innovation"
