@@ -1,0 +1,121 @@
+<!-- Construction Banner -->
+<div class="construction-banner" id="constructionBanner">
+    <div class="construction-content">
+        <div class="construction-icon">🚧</div>
+        <div class="construction-text">
+            <strong>Site Under Construction</strong>
+            <span>I'm currently redesigning my portfolio with an interactive timeline. Thanks for your patience!</span>
+        </div>
+        <button class="construction-close" onclick="dismissBanner()" aria-label="Dismiss banner">×</button>
+    </div>
+</div>
+
+<style>
+.construction-banner {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #78350f;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.construction-banner.hidden {
+    transform: translateY(-100%);
+}
+
+.construction-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.construction-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.construction-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.construction-text strong {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.construction-text span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.construction-close {
+    background: none;
+    border: none;
+    color: #78350f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.construction-close:hover {
+    background-color: rgba(120, 53, 15, 0.1);
+}
+
+/* Adjust body padding when banner is visible */
+body {
+    padding-top: 80px;
+    transition: padding-top 0.3s ease;
+}
+
+body.banner-hidden {
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .construction-content {
+        padding: 0 1rem;
+    }
+    
+    .construction-text {
+        font-size: 0.9rem;
+    }
+    
+    .construction-text span {
+        font-size: 0.8rem;
+    }
+}
+</style>
+
+<script>
+function dismissBanner() {
+    const banner = document.getElementById('constructionBanner');
+    const body = document.body;
+    
+    banner.classList.add('hidden');
+    body.classList.add('banner-hidden');
+    
+    // Store dismissal in localStorage
+    localStorage.setItem('constructionBannerDismissed', 'true');
+}
+
+// Check if banner was previously dismissed
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('constructionBannerDismissed') === 'true') {
+        dismissBanner();
+    }
+});
+</script>

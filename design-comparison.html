@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Redesign Options - Satoe Sakuma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: #f9fafb;
+        }
+
+        .header {
+            background: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .option-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .option-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .option-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-description {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .option-features {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            padding: 0.25rem 0.75rem;
+            background: #f3f4f6;
+            color: #374151;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .option-preview {
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .preview-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform: scale(0.8);
+            transform-origin: 0 0;
+            width: 125%;
+            height: 125%;
+        }
+
+        .option-actions {
+            padding: 1.5rem 2rem;
+            background: #f9fafb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .color-palette span {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-right: 0.5rem;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #e5e7eb;
+        }
+
+        .select-btn {
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .select-btn:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .comparison-note {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .comparison-note h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .comparison-note p {
+            color: #6b7280;
+        }
+
+        @media (min-width: 1200px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .option-actions {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Website Redesign Options</h1>
+        <p>Three modern design approaches for your portfolio website. Each option represents a different style and user experience.</p>
+    </div>
+
+    <div class="container">
+        <div class="options-grid">
+            <!-- Option 1: Minimalist Tech Professional -->
+            <div class="option-card">
+                <div class="option-header">
+                    <h2 class="option-title">Option 1: Minimalist Tech Professional</h2>
+                    <p class="option-description">
+                        Clean, modern design focusing on typography and subtle animations. Perfect for showcasing technical expertise with a professional, minimal aesthetic.
+                    </p>
+                    <div class="option-features">
+                        <span class="feature-tag">Glassmorphism</span>
+                        <span class="feature-tag">Clean Typography</span>
+                        <span class="feature-tag">Subtle Animations</span>
+                        <span class="feature-tag">Modern Timeline</span>
+                        <span class="feature-tag">Code Elements</span>
+                    </div>
+                </div>
+                <div class="option-preview">
+                    <iframe src="mockup-option1-minimal.html" class="preview-iframe"></iframe>
+                </div>
+                <div class="option-actions">
+                    <div class="color-palette">
+                        <span>Colors:</span>
+                        <div class="color-dot" style="background: #1a1a2e;"></div>
+                        <div class="color-dot" style="background: #3b82f6;"></div>
+                        <div class="color-dot" style="background: #f8f9fa;"></div>
+                        <div class="color-dot" style="background: #6b7280;"></div>
+                    </div>
+                    <a href="mockup-option1-minimal.html" target="_blank" class="select-btn">View Full Screen</a>
+                </div>
+            </div>
+
+            <!-- Option 2: Creative Portfolio Style -->
+            <div class="option-card">
+                <div class="option-header">
+                    <h2 class="option-title">Option 2: Creative Portfolio Style</h2>
+                    <p class="option-description">
+                        Bold, dynamic design with animated elements and creative layouts. Features bento box grids and floating animations for a more artistic, engaging experience.
+                    </p>
+                    <div class="option-features">
+                        <span class="feature-tag">Animated Background</span>
+                        <span class="feature-tag">Bento Grid Layout</span>
+                        <span class="feature-tag">Floating Elements</span>
+                        <span class="feature-tag">Bold Typography</span>
+                        <span class="feature-tag">Creative Interactions</span>
+                    </div>
+                </div>
+                <div class="option-preview">
+                    <iframe src="mockup-option2-creative.html" class="preview-iframe"></iframe>
+                </div>
+                <div class="option-actions">
+                    <div class="color-palette">
+                        <span>Colors:</span>
+                        <div class="color-dot" style="background: #2d3748;"></div>
+                        <div class="color-dot" style="background: #10b981;"></div>
+                        <div class="color-dot" style="background: #ff6b6b;"></div>
+                        <div class="color-dot" style="background: #fafafa;"></div>
+                    </div>
+                    <a href="mockup-option2-creative.html" target="_blank" class="select-btn">View Full Screen</a>
+                </div>
+            </div>
+
+            <!-- Option 3: Modern Corporate Clean -->
+            <div class="option-card">
+                <div class="option-header">
+                    <h2 class="option-title">Option 3: Modern Corporate Clean</h2>
+                    <p class="option-description">
+                        Professional, trustworthy design ideal for healthcare and public policy work. Clean lines, structured layout, and accessibility-focused approach.
+                    </p>
+                    <div class="option-features">
+                        <span class="feature-tag">Professional Layout</span>
+                        <span class="feature-tag">Clean Navigation</span>
+                        <span class="feature-tag">Stats Section</span>
+                        <span class="feature-tag">Accessibility Focus</span>
+                        <span class="feature-tag">Corporate Appeal</span>
+                    </div>
+                </div>
+                <div class="option-preview">
+                    <iframe src="mockup-option3-corporate.html" class="preview-iframe"></iframe>
+                </div>
+                <div class="option-actions">
+                    <div class="color-palette">
+                        <span>Colors:</span>
+                        <div class="color-dot" style="background: #1e40af;"></div>
+                        <div class="color-dot" style="background: #059669;"></div>
+                        <div class="color-dot" style="background: #ffffff;"></div>
+                        <div class="color-dot" style="background: #f3f4f6;"></div>
+                    </div>
+                    <a href="mockup-option3-corporate.html" target="_blank" class="select-btn">View Full Screen</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-note">
+            <h3>Ready to Choose?</h3>
+            <p>Each design can be fully customized and integrated with your existing Jekyll setup. Click "View Full Screen" to explore each option in detail, then let me know which direction you'd like to pursue!</p>
+        </div>
+    </div>
+</body>
+</html>
