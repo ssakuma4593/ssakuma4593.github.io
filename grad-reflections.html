@@ -63,53 +63,33 @@ permalink: /grad-reflections/
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2">
 						<div class="reflection-posts">
-							<!-- Collapsible reflection posts -->
+							<!-- Individual reflection posts with links to full markdown files -->
 							<div class="reflection-post">
-								<div class="reflection-header" onclick="toggleReflection('reflection1')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
-									<h5 style="margin: 0; display: inline-block;">Setting Up for Success</h5>
-									<span id="reflection1-icon" style="float: right; font-weight: bold;">▼</span>
+								<div class="reflection-header" style="border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+									<h5 style="margin: 0; display: inline-block;">
+										<a href="/reflections/setting-up-for-success.html" style="text-decoration: none; color: inherit;">Setting Up for Success</a>
+									</h5>
 									<p class="text-muted small" style="margin: 5px 0 0 0;">October 2025</p>
-								</div>
-								<div id="reflection1-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;">
-									<p class="text-muted">
+									<p class="text-muted" style="margin: 10px 0 0 0;">
 										Starting the MPH program has been both exciting and overwhelming. The transition from industry back to academia 
-										requires a different mindset, but the diversity of perspectives from my classmates - from clinicians to 
-										policy makers to researchers - creates an incredibly rich learning environment.
+										requires a different mindset, but the diversity of perspectives from my classmates creates an incredibly rich learning environment.
 									</p>
 								</div>
 							</div>
 							
 							<div class="reflection-post" style="margin-top: 20px;">
-								<div class="reflection-header" onclick="toggleReflection('reflection2')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
-									<h5 style="margin: 0; display: inline-block;">The Power of Systems Thinking</h5>
-									<span id="reflection2-icon" style="float: right; font-weight: bold;">▼</span>
+								<div class="reflection-header" style="border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+									<h5 style="margin: 0; display: inline-block;">
+										<a href="/reflections/power-of-systems-thinking.html" style="text-decoration: none; color: inherit;">The Power of Systems Thinking</a>
+									</h5>
 									<p class="text-muted small" style="margin: 5px 0 0 0;">September 2025</p>
-								</div>
-								<div id="reflection2-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;">
-									<p class="text-muted">
-										One of the biggest shifts in thinking has been moving from individual patient care (the focus at Firefly) 
-										to population health. Understanding how interventions can impact entire communities requires a completely 
-										different framework for thinking about problems and solutions.
+									<p class="text-muted" style="margin: 10px 0 0 0;">
+										One of the biggest shifts in thinking has been moving from individual patient care to population health. 
+										Understanding how interventions can impact entire communities requires a completely different framework.
 									</p>
 								</div>
 							</div>
 						</div>
-						
-						<!-- JavaScript for toggle functionality -->
-						<script>
-							function toggleReflection(id) {
-								const content = document.getElementById(id + '-content');
-								const icon = document.getElementById(id + '-icon');
-								
-								if (content.style.display === 'none' || content.style.display === '') {
-									content.style.display = 'block';
-									icon.textContent = '▲';
-								} else {
-									content.style.display = 'none';
-									icon.textContent = '▼';
-								}
-							}
-						</script>
 					</div>
 				</div>
 			</div>
