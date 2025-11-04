@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Fighting at the Margins
 date: 2025-10-20
 category: Graduate School Reflections
