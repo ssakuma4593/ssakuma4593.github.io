@@ -63,31 +63,67 @@ permalink: /grad-reflections/
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2">
 						<div class="reflection-posts">
-							<!-- Individual reflection posts with links to full markdown files -->
+							<!-- Collapsible reflection posts -->
 							<div class="reflection-post">
-								<div class="reflection-header" style="border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
-									<h5 style="margin: 0; display: inline-block;">
-										<a href="/reflections/KNN.html" style="text-decoration: none; color: inherit;">K-Nearest Neighbors</a>
-									</h5>
+								<div class="reflection-header" onclick="toggleReflection('knn-reflection')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+									<h5 style="margin: 0; display: inline-block;">K-Nearest Neighbors</h5>
+									<span id="knn-reflection-icon" style="float: right; font-weight: bold;">▼</span>
 									<p class="text-muted small" style="margin: 5px 0 0 0;">October 30, 2025</p>
-									<p class="text-muted" style="margin: 10px 0 0 0;">
-										Have you heard the phrase "You are the average of your 5 closest friends?" Yes? Okay, then you know the machine learning model K-Nearest Neighbors (KNN). It might be my favorite of the ML models so far because it makes me laugh...
+								</div>
+								<div id="knn-reflection-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; background: white;">
+									<p class="text-muted">
+										Have you heard the phrase "You are the average of your 5 closest friends?" Yes? Okay, then you know the machine learning model K-Nearest Neighbors (KNN). It might be my favorite of the ML models so far because it makes me laugh. Besides linear regression, which if you hear anyone say they use AI, changes are, they are just using linear regression. Side bar real quick, linear regression is you have a bunch of data and you're trying to figure out how a parameter relates to the output. For example, miles run vs. amount of suffering. Then you just draw a line that best fits the data. Then if someone gives you a number of miles, the model predicts how much suffering based on the line you just drew. My data would just look like up and to the right - more miles = more suffering. *Note: This would only work if you're like me and you don't enjoy running. If your data points actually show that you suffer first but then are very happy the more miles you run, a line would not accurately represent the relationship and you'd need a non-linear model.
+									</p>
+									<p class="text-muted">
+										Back to KNN. So, KNN is like, you have a new datapoint - you meet a new person. Let's say they are a potential partner because that's fun. On this date, you ask them to bring their 5 closest friends. Then you have to guess for that datapoint, what they are like. So let's say we're trying to figure out is this person an asshole. They bring their 5 friends. 4 out of 5 are assholes. Then you predict that your date, is an asshole. On the otherhand, only 1 out of 5 is an asshole. Then most likely they are not an asshole.
+									</p>
+									<p class="text-muted">
+										Okay but what if they can only bring their closest friend. Just one. High stakes. Then it gets way harder because now, just because that one friend is an asshole, doesn't mean that they are necessarily an asshole, but you (the model) would decide that they are an asshole. Thus, overfitting the data. On the otherhand, let's say you tell them to bring 50 people who they consider close. First off, that would be very impressive because who has 50 people that are readily available to go on this date with them. But then it gets harder to tell because you have people from their best friend to their cousin once removed. Finding the right K (number of people to bring) is kind of an art.
+									</p>
+									<p class="text-muted">
+										The other point is that when you ask them to bring people, not everyone should be weighted the same, right? Their closest friend probably says more about them than that cousin once removed. The weighting of the datapoints by distance, where the farther away you are, the less you count, is called "kernel smoothing". Now you know everything I know about KNN!
 									</p>
 								</div>
 							</div>
 							
 							<div class="reflection-post" style="margin-top: 20px;">
-								<div class="reflection-header" style="border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
-									<h5 style="margin: 0; display: inline-block;">
-										<a href="/reflections/fighting-at-the-margins.html" style="text-decoration: none; color: inherit;">Fighting at the Margins</a>
-									</h5>
+								<div class="reflection-header" onclick="toggleReflection('fighting-reflection')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
+									<h5 style="margin: 0; display: inline-block;">Fighting at the Margins</h5>
+									<span id="fighting-reflection-icon" style="float: right; font-weight: bold;">▼</span>
 									<p class="text-muted small" style="margin: 5px 0 0 0;">October 20, 2025</p>
-									<p class="text-muted" style="margin: 10px 0 0 0;">
-										The One Big Beautiful Bill (OBBB) introduces work requirements for those seeking Medicaid enrollment. Medicaid since it was introduced has kept costing more and more. I've heard that Medicaid has huge fraud and waste...
+								</div>
+								<div id="fighting-reflection-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; background: white;">
+									<p class="text-muted">
+										The One Big Beautiful Bill (OBBB) introduces work requirements for those seeking Medicaid enrollment. Medicaid since it was introduced has kept costing more and more. I've heard that Medicaid has huge fraud and waste. Specifically, that "single men living in their mom's basement playing video games all day are getting tax credits to get healthcare" and the OBBB is targeting to remove those people who should work and are not from getting tax-payer dollars for their own healthcare. I've also heard that it is common for people on Medicaid to not have consistent jobs that can provide 80 hours of work per month to quality and without the premium tax credits, paying for health coverage out of pockets becomes impossible. So which is it? I suspect it is a little of both.
+									</p>
+									<p class="text-muted">
+										<img src="/img/reflections/knn-classification-k100.png" alt="KNN Classification with K=100" style="max-width: 100%; height: auto; margin: 20px 0;">
+									</p>
+									<p class="text-muted">
+										In my Machine Learning and Big Data Analytics class at the Kennedy school, they showed this K-Nearest Neighbor (KNN) model. The US is vast and the people are so diverse, yet when you are making policies like Medicaid and Medicare, it is similar to drawing a line to determine who gets what. It ends up being crude. Like this dark line that separates the people the government says should get healthcare aid, let's say it's the orange, and the people they say won't get aid, let's say is blue, there are some on the "wrong" side. Some people who should get aid are not getting aid and some people who shouldn't get aid (the single men playing video games in their mom's basement) who are. I would think the reality of the misclassification is quite small compared to all of the orange dots representing people who get aid, who otherwise would not have received anything. Yet, I think the news outlets, social media, and most of the public discourse is focused on the few misclassifications. Can we do better? Sure, but creating a brand new line as the OBBB is doing with harsher new work requirements feels rash when mistake in classification means real people will suffer.
+									</p>
+									<p class="text-muted">
+										I wonder if this is something that ML can help with. Developing a model that can predict what parameters are the best to indicate someone who needs help with healthcare coverage. But also, something tells me that it may not be a data issue, but a political one. I've found that logic can only counter logical arguments and when they are emotions based, no amount of data will help. One can hope though, right?
 									</p>
 								</div>
 							</div>
 						</div>
+						
+						<!-- JavaScript for toggle functionality -->
+						<script>
+							function toggleReflection(id) {
+								const content = document.getElementById(id + '-content');
+								const icon = document.getElementById(id + '-icon');
+								
+								if (content.style.display === 'none' || content.style.display === '') {
+									content.style.display = 'block';
+									icon.textContent = '▲';
+								} else {
+									content.style.display = 'none';
+									icon.textContent = '▼';
+								}
+							}
+						</script>
 					</div>
 				</div>
 			</div>
