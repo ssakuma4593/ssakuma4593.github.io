@@ -3,3 +3,7 @@ markdown: kramdown
 email: satoesakuma@gmail.com
 
 permalink: /tech-blog/:year/:month/:day/:title
+
+collections:
+  reflections:
+    output: false
