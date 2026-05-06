@@ -32,7 +32,13 @@
                                 {% endif %}
                             </ul>
                             {% if post.client-link %}
-                            <a href="{{ post.client-link }}" target="_blank" class="btn btn-primary"><i class="fa fa-github"></i> View on GitHub</a>
+                            <a href="{{ post.client-link }}" target="_blank" class="btn btn-primary">
+                                {% if post.client-link contains 'github.com' %}
+                                <i class="fa fa-github"></i> View on GitHub
+                                {% else %}
+                                <i class="fa fa-external-link"></i> Visit Project
+                                {% endif %}
+                            </a>
                             {% endif %}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
