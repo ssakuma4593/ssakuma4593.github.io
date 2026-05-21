@@ -545,6 +545,16 @@
     object-fit: cover;
     display: block;
   }
+  .proj.portrait-photo .img-wrap {
+    aspect-ratio: 2 / 3;
+  }
+  .proj.portrait-photo .proj-img {
+    background: var(--cream-2);
+  }
+  .proj.portrait-photo .proj-img img {
+    object-fit: contain;
+    object-position: center top;
+  }
   .proj.has-photo .proj-img .ph { display: none; }
   .proj-img .ph {
     font-family: var(--mono);
