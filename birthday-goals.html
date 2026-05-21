@@ -50,6 +50,7 @@ permalink: /birthday-goals/
         <p class="goal-year-dates">
           <span>Started {{ year.started }}</span>
           {% if year.review %}<span> · Review {{ year.review }}</span>{% endif %}
+          {% if year.last_checkin %}<span> · Last check-in {{ year.last_checkin }}</span>{% endif %}
         </p>
       {% endif %}
       {% if goal_count > 0 %}
@@ -70,7 +71,7 @@ permalink: /birthday-goals/
       {% for cat in year.categories %}
         {% if cat.section != current_section %}
           {% assign current_section = cat.section %}
-          <h3 class="goal-section-label">{{ cat.section }}</h3>
+          <h3 class="goal-section-banner section-{{ cat.section | downcase }}">{{ cat.section }}</h3>
         {% endif %}
         <h4 class="goal-category-label">{{ cat.name }}</h4>
         <div class="goal-grid">

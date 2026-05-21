@@ -6,13 +6,14 @@ years:
     tagline: "Quality over quantity. A big year deserves goals that meet it."
     started: "April 5, 2026"
     review: "April 5, 2027"
+    last_checkin: "May 21, 2026"
     categories:
       - section: "Internal"
         name: "Body"
         goals:
           - number: 1
             title: "Swim 500 yards continuously"
-            description: "Target April 2027. Training in two phases—before birth (May–Sept 2026, maintenance) and after postpartum recovery (Nov 2026–April 2027, build). Pause during birth and 6–8 weeks postpartum is planned and expected."
+            description: "At 25 yards so far—swimming at the YMCA and working on breathing. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
             progress: 5
             status: in_progress
           - number: 2
@@ -26,8 +27,8 @@ years:
         goals:
           - number: 3
             title: "Build a healthcare landscape map"
-            description: "Already started with weekly AI healthcare trend summaries. This year, turn that into a living document of the players, the gaps, and the intersections."
-            progress: 20
+            description: "In progress—building on it every week with AI healthcare trend summaries, turning into a living map of players, gaps, and intersections."
+            progress: 10
             status: in_progress
           - number: 4
             title: "Reassess leadership style every 90 days in the new job"
@@ -37,48 +38,48 @@ years:
           - number: 5
             title: "Publish one meaningful update to the CHC search tool"
             description: "Ship one concrete improvement that moves it closer to actually helping people."
-            progress: 10
-            status: in_progress
+            progress: 0
+            status: not_started
             link: "https://satoesakuma.com/community-health-center-search/"
             image: /img/portfolio/community-health-center-search.png
           - number: 6
             title: "Join Toastmasters and deliver 3 speeches"
-            description: "Real reps, real audience, real discomfort. Build this before September while you still have the bandwidth."
-            progress: 0
-            status: not_started
+            description: "Not started yet—first meeting June 2, 2026. Real reps, real audience, real discomfort; build before September while bandwidth allows."
+            progress: 5
+            status: in_progress
 
       - section: "Internal"
         name: "Mind"
         goals:
           - number: 7
             title: "Read 5 books — at least 2 across new fields"
-            description: "History, biography, science, fiction. Pattern recognition across disciplines compounds quietly but dramatically."
+            description: "In progress: Make Time (1 of 5). History, biography, science, fiction—pattern recognition across disciplines compounds quietly."
             progress: 20
             status: in_progress
           - number: 8
             title: "Build one personal AI tool you actually use weekly"
-            description: "Pick one from your Obsidian agent or CHC infrastructure ideas and get it to daily-life level, not just prototype."
-            progress: 0
-            status: not_started
+            description: "Building a second brain that acts as my executive assistant—reachable from my phone. About 20% there."
+            progress: 20
+            status: in_progress
           - number: 9
             title: "Do 3 puzzles"
-            description: "Kept from the list at 32. Still counts."
-            progress: 0
-            status: not_started
+            description: "Started 1 of 3."
+            progress: 15
+            status: in_progress
           - number: 10
             title: "Try 5 new foods"
-            description: "Kept from 32. Still counts."
-            progress: 0
-            status: not_started
+            description: "Tried spicy black cod at Nari in Midtown NY—1 of 5 down."
+            progress: 20
+            status: in_progress
 
       - section: "External"
         name: "People"
         goals:
           - number: 11
             title: "Mail 12 letters — one a month"
-            description: "One a month is a practice, not a task."
-            progress: 0
-            status: not_started
+            description: "April: birthday cards. May: birthday cards and postcards. One a month is a practice, not a task."
+            progress: 17
+            status: in_progress
           - number: 12
             title: "Interview 3 people about parenthood before the baby arrives"
             description: "People whose version of parenting you admire. Record it or take notes—you'll want it later, and so might your kid someday."
@@ -86,9 +87,9 @@ years:
             status: not_started
           - number: 13
             title: "Begin volunteering at hospice"
-            description: "Not a number. Show up for someone for as long as they need it."
-            progress: 0
-            status: not_started
+            description: "Starting with a Korean family in Somerville—first visit tomorrow."
+            progress: 5
+            status: in_progress
 
       - section: "External"
         name: "Money"
@@ -100,9 +101,9 @@ years:
             status: not_started
           - number: 15
             title: "Read one investing book and make 5 intentional Robinhood trades"
-            description: "Framework first, then trades that feel intentional, not lucky. Currently reading The Intelligent Investor by Ben Graham."
-            progress: 15
-            status: in_progress
+            description: "Waiting to pick up The Intelligent Investor at the library. Framework first, then five trades that feel intentional, not lucky."
+            progress: 0
+            status: not_started
 
     seasons:
       - title: "All year (with a pause) — Body #1 Swimming"

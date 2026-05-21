@@ -852,24 +852,50 @@
     color: var(--terra);
     margin-bottom: 20px;
   }
-  .goal-section-label {
+  .goal-section-banner {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 56px 0 28px;
+    padding: 20px 24px;
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+    line-height: 1;
+  }
+  .goal-section-banner:first-of-type { margin-top: 0; }
+  .goal-section-banner.section-internal {
+    background: color-mix(in srgb, var(--terra) 10%, var(--paper));
+    border-color: color-mix(in srgb, var(--terra) 35%, var(--rule));
+    color: var(--ink);
+  }
+  .goal-section-banner.section-internal::after {
+    content: "Inside";
+    display: block;
     font-family: var(--mono);
     font-size: 11px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--terra);
-    margin: 48px 0 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    margin-top: 10px;
   }
-  .goal-section-label::before {
-    content: "";
-    width: 28px;
-    height: 1px;
-    background: var(--terra);
+  .goal-section-banner.section-external {
+    background: color-mix(in srgb, var(--olive) 14%, var(--paper));
+    border-color: color-mix(in srgb, var(--olive) 40%, var(--rule));
+    color: var(--ink);
   }
-  .goal-section-label:first-of-type { margin-top: 0; }
+  .goal-section-banner.section-external::after {
+    content: "Out in the world";
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--olive);
+    margin-top: 10px;
+  }
   .goal-category-label {
     font-family: var(--serif);
     font-size: 26px;
