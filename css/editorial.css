@@ -208,7 +208,7 @@
 
   .sticker.s1 { top: 18%; right: 4%; transform: rotate(3deg); }
   .sticker.s2 { top: 52%; right: 12%; transform: rotate(-4deg); }
-  .sticker.s3 { top: 78%; right: 32%; transform: rotate(2deg); }
+  .sticker.s3 { top: 78%; right: 14%; transform: rotate(2deg); }
   @media (max-width: 980px) {
     .hero .stickers { display: none; }
   }
