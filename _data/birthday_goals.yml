@@ -74,6 +74,7 @@ years:
             progress: 20
             status: in_progress
             image: /img/goals/33/nari-spicy-black-cod.png
+            image_fit: contain
 
       - section: "External"
         name: "People"
