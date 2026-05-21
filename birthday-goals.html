@@ -90,17 +90,13 @@ permalink: /birthday-goals/
       <p class="goal-empty">Goals for this year are on the way. Check back soon.</p>
     {% endif %}
 
-    {% if year.seasons %}
-      <div class="goal-seasons">
-        <h3 class="goal-seasons-title">Seasonal schedule</h3>
-        <p class="goal-seasons-lede">You don't have to focus on everything at once.</p>
-        {% for season in year.seasons %}
-          <details class="goal-season">
-            <summary>{{ season.title }}</summary>
-            <p>{{ season.body }}</p>
-          </details>
-        {% endfor %}
-      </div>
-    {% endif %}
+    <aside class="goal-accountability">
+      <p class="goal-accountability-kicker">Keep me honest</p>
+      <p class="goal-accountability-text">
+        If we're friends, colleagues, or you've read this far—<em>please ask me how these are going.</em>
+        A casual “how's goal 6?” before June 2, or “did you send May's letter?” counts. Friendly accountability welcome.
+      </p>
+      <p class="goal-accountability-hand">Coffee, text, or <a href="mailto:{{ site.email }}">email</a> — I'll actually appreciate it.</p>
+    </aside>
   </section>
 {% endfor %}

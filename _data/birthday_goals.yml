@@ -56,6 +56,8 @@ years:
             description: "In progress: Make Time (1 of 5). History, biography, science, fiction—pattern recognition across disciplines compounds quietly."
             progress: 20
             status: in_progress
+            image: /img/goals/33/make-time.png
+            image_fit: contain
           - number: 8
             title: "Build one personal AI tool you actually use weekly"
             description: "Building a second brain that acts as my executive assistant—reachable from my phone. About 20% there."
@@ -71,6 +73,7 @@ years:
             description: "Tried spicy black cod at Nari in Midtown NY—1 of 5 down."
             progress: 20
             status: in_progress
+            image: /img/goals/33/nari-spicy-black-cod.png
 
       - section: "External"
         name: "People"
@@ -104,15 +107,3 @@ years:
             description: "Waiting to pick up The Intelligent Investor at the library. Framework first, then five trades that feel intentional, not lucky."
             progress: 0
             status: not_started
-
-    seasons:
-      - title: "All year (with a pause) — Body #1 Swimming"
-        body: "May → Sept maintenance. Sept → Nov pause for birth and postpartum (6–8 weeks). Nov 2026 → Apr 2027 build phase toward 500 yards in April 2027."
-      - title: "Season 1 — Spring Launch (Apr → Jun)"
-        body: "Grad school wrapping up, new job starting. Toastmasters + first speech, financial setup, healthcare landscape map, April–June letters."
-      - title: "Season 2 — Summer (Jun → Aug)"
-        body: "New job first 90 days, baby ~10 weeks away. First leadership reassessment, all 3 parenting interviews before September, push swimming before birth, June–August letters."
-      - title: "Season 3 — Fall Baby Season (Sep → Nov)"
-        body: "Give yourself almost nothing—a newborn is the goal. Short letters still count, gentle postpartum movement when cleared, hospice if already started. Everything else paused, no guilt."
-      - title: "Season 4 — Winter Settle In (Dec → Apr)"
-        body: "Second leadership reassessment, ship CHC update, personal AI tool, puzzles, reading season, 5 trades, back in the pool."

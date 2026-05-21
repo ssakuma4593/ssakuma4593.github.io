@@ -1,7 +1,7 @@
 {% assign status = include.goal.status | default: "not_started" %}
 <article class="goal-card status-{{ status }}">
   {% if include.goal.image %}
-    <div class="goal-photo">
+    <div class="goal-photo{% if include.goal.image_fit %} goal-photo--{{ include.goal.image_fit }}{% endif %}">
       {% if include.goal.link %}
         <a href="{{ include.goal.link }}">
           <img src="{{ include.goal.image | prepend: site.baseurl }}" alt="{{ include.goal.title }}">
