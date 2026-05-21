@@ -1,111 +1,62 @@
 ---
 layout: page
 title: Graduate School Reflections
+description: Field notes from MPH year one at Harvard T.H. Chan School of Public Health.
 permalink: /grad-reflections/
 ---
 
-<!DOCTYPE html>
-<html>
+<div class="eyebrow">Grad school</div>
+<h1>Graduate School Reflections</h1>
+<p class="subpage-lede">My journey at Harvard T.H. Chan School of Public Health — policy, research, and the gap between building tools and fixing systems.</p>
 
-	{% include head.html %}
+<div class="content">
+  <h4>Why Public Health?</h4>
+  <p>
+    After spending years in healthcare technology at Firefly Health, I realized that technology alone isn't enough to fix healthcare.
+    The challenges are systemic, requiring policy-level interventions and a deep understanding of public health principles.
+    My MPH at Harvard is helping me bridge the gap between technology innovation and public health policy.
+  </p>
 
-	<body id="page-top" class="index">
-		
-		<!-- Header -->
-		<section id="grad-reflections" class="bg-light-gray" style="margin-top: 100px;">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h2 class="section-heading">Graduate School Reflections</h2>
-						<h3 class="section-subheading text-muted">My Journey at Harvard T.H. Chan School of Public Health</h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="reflection-content">
-							<h4>Why Public Health?</h4>
-							<p class="text-muted">
-								After spending years in healthcare technology at Firefly Health, I realized that technology alone isn't enough to fix healthcare. 
-								The challenges are systemic, requiring policy-level interventions and a deep understanding of public health principles. 
-								My MPH at Harvard is helping me bridge the gap between technology innovation and public health policy.
-							</p>
-							
-							<h4>Current Focus Areas</h4>
-							<p class="text-muted">
-								My studies are concentrated on health policy, with particular interest in how technology can be leveraged to improve 
-								health outcomes at a population level. I'm exploring the intersection of digital health innovation and equitable access to care.
-							</p>
-							
-							<h4>Key Learnings</h4>
-							<ul class="text-muted">
-								<li>The importance of social determinants of health in shaping health outcomes</li>
-								<li>How policy decisions ripple through healthcare systems and communities</li>
-								<li>The critical role of equity and justice in public health interventions</li>
-								<li>The complexity of balancing innovation with regulation in healthcare</li>
-							</ul>
-							
-							<h4>Looking Forward</h4>
-							<p class="text-muted">
-								I'm passionate about using this foundation to create meaningful change in healthcare policy, 
-								particularly around technology adoption and digital health equity. My goal is to help shape policies 
-								that make innovative healthcare solutions accessible to all communities.
-							</p>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Blog Posts Section for Reflections -->
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h3 class="section-subheading text-muted" style="margin-top: 50px;">Recent Thoughts & Updates</h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div class="reflection-posts">
-							<!-- Collapsible reflection posts - dynamically generated from _reflections collection -->
-							{% assign sorted_reflections = site.reflections | sort: 'date' | reverse %}
-							{% for reflection in sorted_reflections %}
-								{% assign reflection_id = reflection.name | replace: '.md', '' | slugify %}
-								{% assign formatted_date = reflection.date | date: "%B %d, %Y" %}
-								<div class="reflection-post" {% unless forloop.first %}style="margin-top: 20px;"{% endunless %}>
-									<div class="reflection-header" onclick="toggleReflection('{{ reflection_id }}')" style="cursor: pointer; border: 1px solid #ddd; padding: 15px; background: #f8f9fa; border-radius: 5px; margin-bottom: 10px;">
-										<h5 style="margin: 0; display: inline-block;">{{ reflection.title }}</h5>
-										<span id="{{ reflection_id }}-icon" style="float: right; font-weight: bold;">▼</span>
-										<p class="text-muted small" style="margin: 5px 0 0 0;">{{ formatted_date }}</p>
-									</div>
-									<div id="{{ reflection_id }}-content" class="reflection-content" style="display: none; padding: 15px; border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px; background: white;">
-										<div class="text-muted">
-											{% assign content = reflection.content | markdownify %}
-											{% assign title_heading = '<h1>' | append: reflection.title | append: '</h1>' %}
-											{{ content | remove_first: title_heading }}
-										</div>
-									</div>
-								</div>
-							{% endfor %}
-						</div>
-						
-						<!-- JavaScript for toggle functionality -->
-						<script>
-							function toggleReflection(id) {
-								const content = document.getElementById(id + '-content');
-								const icon = document.getElementById(id + '-icon');
-								
-								if (content.style.display === 'none' || content.style.display === '') {
-									content.style.display = 'block';
-									icon.textContent = '▲';
-								} else {
-									content.style.display = 'none';
-									icon.textContent = '▼';
-								}
-							}
-						</script>
-					</div>
-				</div>
-			</div>
-		</section>
+  <h4>Current Focus Areas</h4>
+  <p>
+    My studies are concentrated on health policy, with particular interest in how technology can be leveraged to improve
+    health outcomes at a population level. I'm exploring the intersection of digital health innovation and equitable access to care.
+  </p>
 
-		{% include js.html %}
+  <h4>Key Learnings</h4>
+  <ul>
+    <li>The importance of social determinants of health in shaping health outcomes</li>
+    <li>How policy decisions ripple through healthcare systems and communities</li>
+    <li>The critical role of equity and justice in public health interventions</li>
+    <li>The complexity of balancing innovation with regulation in healthcare</li>
+  </ul>
 
-	</body>
-</html>
+  <h4>Looking Forward</h4>
+  <p>
+    I'm passionate about using this foundation to create meaningful change in healthcare policy,
+    particularly around technology adoption and digital health equity. My goal is to help shape policies
+    that make innovative healthcare solutions accessible to all communities.
+  </p>
+</div>
+
+<h2 style="font-family: var(--serif); font-weight: 400; font-size: 28px; margin: 56px 0 24px;">Recent thoughts &amp; updates</h2>
+
+<div class="reflection-posts">
+  {% assign sorted_reflections = site.reflections | sort: 'date' | reverse %}
+  {% for reflection in sorted_reflections %}
+    {% assign reflection_id = reflection.name | replace: '.md', '' | slugify %}
+    {% assign formatted_date = reflection.date | date: "%B %d, %Y" %}
+    <div class="reflection-post">
+      <button type="button" class="reflection-header" data-reflection="{{ reflection_id }}" aria-expanded="false" aria-controls="{{ reflection_id }}-content">
+        <span class="toggle" id="{{ reflection_id }}-icon" aria-hidden="true">▼</span>
+        <h5>{{ reflection.title }}</h5>
+        <span class="date">{{ formatted_date }}</span>
+      </button>
+      <div id="{{ reflection_id }}-content" class="reflection-body content" role="region" aria-labelledby="{{ reflection_id }}-header">
+        {% assign content = reflection.content | markdownify %}
+        {% assign title_heading = '<h1>' | append: reflection.title | append: '</h1>' %}
+        {{ content | remove_first: title_heading }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

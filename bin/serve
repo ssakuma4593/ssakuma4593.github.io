@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+# Prefer Homebrew Ruby (system Ruby 2.6 cannot build Jekyll native gems)
+if [ -x "/usr/local/opt/ruby/bin/ruby" ]; then
+  export PATH="/usr/local/opt/ruby/bin:$PATH"
+elif [ -x "/opt/homebrew/opt/ruby/bin/ruby" ]; then
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+fi
+
+if ! command -v bundle >/dev/null 2>&1; then
+  echo "Bundler not found. Install Ruby first:"
+  echo "  brew install ruby"
+  echo "  gem install bundler"
+  exit 1
+fi
+
+if [ ! -f Gemfile.lock ]; then
+  echo "Installing gems (first run may take a few minutes)..."
+  bundle install
+fi
+
+echo "Starting site at http://localhost:4000"
+exec bundle exec jekyll serve --livereload "$@"

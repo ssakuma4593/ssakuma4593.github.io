@@ -1,194 +1,86 @@
-<!-- Projects Section -->
-<section id="projects">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Projects</h2>
-                <h3 class="section-subheading text-muted">Technical Projects & Innovations</h3>
-            </div>
-        </div>
-        
-        <!-- Filter tabs for different project types -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="project-filters" style="margin-bottom: 40px;">
-                    <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>
-                    <button class="btn btn-outline filter-btn" data-filter="life">Life</button>
-                    <button class="btn btn-outline filter-btn" data-filter="ml">AI/ML</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            {% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 project-item" data-category="{{ post.subtitle | downcase }}">
-                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive" alt="{{ post.alt }}">
-                                <div class="project-hover">
-                                    <div class="project-hover-content">
-                                        <i class="fa fa-plus fa-3x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h4>{{ post.title }}</h4>
-                                <p class="text-muted">{{ post.description | truncatewords: 25 }}</p>
-                                <div class="project-tags">
-                                    <span class="badge">{{ post.subtitle }}</span>
-                                    <span class="badge">{{ post.project-date }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-        
-        <!-- Call to action -->
-        <div class="row">
-            <div class="col-lg-12 text-center" style="margin-top: 50px;">
-                <p class="text-muted">
-                    Interested in collaborating or learning more about any of these projects? 
-                    <a href="mailto:satoesakuma@gmail.com">Let's connect!</a>
-                </p>
-            </div>
-        </div>
+<section class="section alt" id="projects">
+  <div class="wrap">
+    <div class="eyebrow">003 · Things I've Made</div>
+    <h2>Projects, side <em>quests,</em> &amp; oddities.</h2>
+    <p class="kicker">Some technical, some personal, all things I'm <em>weirdly proud of.</em></p>
+
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all" type="button">All <span class="count">4</span></button>
+      <button data-filter="ai" type="button">AI / ML <span class="count">2</span></button>
+      <button data-filter="life" type="button">Life <span class="count">2</span></button>
     </div>
+
+    <div class="projects" id="grid">
+      <a class="proj size-lg cover-tone-3" data-cat="ai" href="{{ '/' | prepend: site.baseurl }}">
+        <div class="img-wrap"><div class="proj-img"><div class="ph">community health center search · screenshot</div></div></div>
+        <div class="meta"><span class="cat">AI / ML</span><span class="date">May 2026</span></div>
+        <h3>Community Health Center Search Tool</h3>
+        <p class="blurb">A tool that helps people quickly find nearby community health centers, designed to make local care discovery simpler and more accessible by putting all the options in one place.</p>
+        <div class="footer"><span>LIVE → satoesakuma.com</span><span class="arrow" aria-hidden="true">→</span></div>
+      </a>
+
+      <a class="proj size-md cover-tone-1 has-photo" data-cat="ai" href="https://github.com/ssakuma4593/gap_cloud" target="_blank" rel="noopener noreferrer">
+        <div class="img-wrap">
+          <div class="proj-img">
+            <img src="{{ '/img/portfolio/gap-cloud.png' | prepend: site.baseurl }}" alt="Medical Research Gap Analysis Tool">
+          </div>
+        </div>
+        <div class="meta"><span class="cat">AI / ML</span><span class="date">Oct 2025</span></div>
+        <h3>Medical Research Gap Analysis Tool</h3>
+        <p class="blurb">Python + BERTopic + AWS S3. Identifies cross-disciplinary opportunities in medical literature by surfacing topic clusters (cardiovascular, dental AI, ophthalmology…) and the gaps between them.</p>
+        <div class="footer"><span>GITHUB · ssakuma4593/gap_cloud</span><span class="arrow" aria-hidden="true">→</span></div>
+      </a>
+
+      <article class="proj size-sm cover-tone-2 has-photo" data-cat="life">
+        <div class="img-wrap">
+          <div class="proj-img">
+            <img src="{{ '/img/portfolio/half.png' | prepend: site.baseurl }}" alt="Cambridge Half Marathon">
+          </div>
+        </div>
+        <div class="meta"><span class="cat">Life</span><span class="date">Nov 2019</span></div>
+        <h3>Cambridge Half Marathon</h3>
+        <p class="blurb">I started setting goals tied to my age each birthday. That year: run a half, the whole thing. 9:23 pace. Taught me I can do most things if I dedicate the time.</p>
+        <div class="footer"><span>13.1 MI · 9:23 PACE</span><span class="arrow" aria-hidden="true">→</span></div>
+      </article>
+
+      <article class="proj size-wide cover-tone-4 has-photo" data-cat="life">
+        <div class="img-wrap">
+          <div class="proj-img">
+            <img src="{{ '/img/portfolio/notary-certificate.png' | prepend: site.baseurl }}" alt="Massachusetts Notary Public">
+          </div>
+        </div>
+        <div class="meta"><span class="cat">Life</span><span class="date">Feb 2022</span></div>
+        <h3>Massachusetts Notary Public</h3>
+        <p class="blurb">Became a certified notary in the Commonwealth of Massachusetts because, well, why not. Hardest part: finding a practicing MA lawyer to vouch that I'm a good person. Available for notarizing your important documents.</p>
+        <div class="footer"><span>COMMISSION · COMMONWEALTH OF MA</span><span class="arrow" aria-hidden="true">→</span></div>
+      </article>
+    </div>
+
+    <div style="margin-top:80px">
+      <div class="eyebrow">004 · Elsewhere</div>
+      <h2 style="margin-bottom:48px">Other <em>corners.</em></h2>
+      <div class="elsewhere">
+        <a class="else-card" href="{{ '/grad-reflections/' | prepend: site.baseurl }}">
+          <div class="icon">✎</div>
+          <h5>Grad Reflections</h5>
+          <p>Field notes from MPH year one.</p>
+        </a>
+        <a class="else-card" href="https://github.com/ssakuma4593" target="_blank" rel="noopener noreferrer">
+          <div class="icon">{ }</div>
+          <h5>GitHub</h5>
+          <p>Code, side projects, scratch repos.</p>
+        </a>
+        <a class="else-card" href="mailto:satoesakuma@gmail.com">
+          <div class="icon">✉</div>
+          <h5>Email</h5>
+          <p>For coffee, collabs, or notary needs.</p>
+        </a>
+        <a class="else-card" href="#">
+          <div class="icon">CV</div>
+          <h5>Resume</h5>
+          <p>The traditional one-pager (PDF).</p>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- Add some custom CSS for the project cards -->
-<style>
-.project-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
-.project-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    background-color: white;
-    border-radius: 8px 8px 0 0;
-}
-
-.project-hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(254, 209, 54, 0.9);
-    opacity: 0;
-    transition: all ease 0.5s;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-card:hover .project-hover {
-    opacity: 1;
-}
-
-.project-hover-content {
-    color: white;
-    text-align: center;
-}
-
-.project-content {
-    padding: 20px;
-}
-
-.project-content h4 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.project-tags {
-    margin-top: 15px;
-}
-
-.project-tags .badge {
-    background-color: #3498db;
-    color: white;
-    padding: 4px 8px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 12px;
-    font-size: 0.75em;
-}
-
-.project-filters .filter-btn {
-    margin: 0 5px;
-    border: 1px solid #3498db;
-    color: #3498db;
-    background: transparent;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-
-.project-filters .filter-btn.active,
-.project-filters .filter-btn:hover {
-    background-color: #3498db;
-    color: white;
-}
-
-.project-item {
-    transition: opacity 0.3s ease;
-}
-
-.project-item.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-
-            // Update active button
-            filterBtns.forEach(b => b.classList.remove('active', 'btn-primary'));
-            filterBtns.forEach(b => b.classList.add('btn-outline'));
-            this.classList.add('active', 'btn-primary');
-            this.classList.remove('btn-outline');
-
-            // Filter projects
-            projectItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (filter === 'all' || category.includes(filter)) {
-                    item.style.display = 'block';
-                    item.classList.remove('hidden');
-                } else {
-                    item.style.display = 'none';
-                    item.classList.add('hidden');
-                }
-            });
-        });
-    });
-});
-</script>

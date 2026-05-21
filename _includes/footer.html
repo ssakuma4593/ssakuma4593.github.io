@@ -1,25 +1,29 @@
-  <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <p class="big">
+      Want to <em>collaborate?</em><br>
+      Or just say <a href="mailto:satoesakuma@gmail.com">hello</a>,<br>
+      I'd <em>love that.</em>
+    </p>
+    <div class="row">
+      <div class="col">
+        <h6>Reach me</h6>
+        <a href="mailto:satoesakuma@gmail.com">satoesakuma@gmail.com</a>
+        <a href="https://github.com/ssakuma4593" target="_blank" rel="noopener noreferrer">github.com/ssakuma4593</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="col">
+        <h6>I'm into</h6>
+        <p>Health policy, equitable care, topic modeling, distance running, learning languages, hosting dinner parties.</p>
+      </div>
+      <div class="col">
+        <h6>Open to</h6>
+        <p>Coffee in Cambridge or Boston · Research collabs at the intersection of health + tech · <span class="hand">…and notarizing your documents</span></p>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© {{ 'now' | date: '%Y' }} Satoe Sakuma · made with care in Cambridge, MA</span>
+      <span>v2.0 · last updated May 2026</span>
+    </div>
+  </div>
+</footer>
