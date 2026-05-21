@@ -1,0 +1,15 @@
+# Birthday goals — edit this file to update the site.
+# Fields per goal:
+#   title (required)
+#   description (optional)
+#   progress: 0–100
+#   status: done | in_progress | not_started
+#   image: optional, e.g. /img/goals/33/slug.jpg
+#   link: optional URL to a project or post
+# Do not add "suggested by" names.
+
+years:
+  - age: 33
+    title: "Goals for 33"
+    lede: "Every birthday I set as many goals as my new age—33 goals for turning 33. Progress bars and photos update as I go."
+    goals: []

@@ -1,0 +1,91 @@
+---
+layout: page
+title: Birthday Goals
+description: Age-tied birthday goals—one goal for each year of life, tracked with progress and photos.
+permalink: /birthday-goals/
+---
+
+<div class="eyebrow">Life</div>
+<h1>Birthday goals</h1>
+<p class="subpage-lede">Every year on my birthday I set <em>N</em> goals for age <em>N</em>. One list, one year at a time—tracked here with progress and the occasional photo when a goal earns one.</p>
+
+{% assign years = site.data.birthday_goals.years | sort: "age" | reverse %}
+
+{% for year in years %}
+  {% assign goals = year.goals %}
+  {% assign done_count = 0 %}
+  {% assign total_progress = 0 %}
+  {% for g in goals %}
+    {% if g.status == "done" %}
+      {% assign done_count = done_count | plus: 1 %}
+    {% endif %}
+    {% assign total_progress = total_progress | plus: g.progress %}
+  {% endfor %}
+  {% if goals.size > 0 %}
+    {% assign avg_progress = total_progress | divided_by: goals.size %}
+  {% else %}
+    {% assign avg_progress = 0 %}
+  {% endif %}
+
+  <section class="goal-year" id="age-{{ year.age }}">
+    <div class="goal-year-head">
+      <h2>{% if year.title %}{{ year.title }}{% else %}Goals for {{ year.age }}{% endif %}</h2>
+      {% if year.lede %}
+        <p class="goal-year-lede">{{ year.lede }}</p>
+      {% endif %}
+      {% if goals.size > 0 %}
+        <div class="goal-year-stats">
+          <span class="stat"><strong>{{ done_count }}</strong> / {{ goals.size }} done</span>
+          <span class="stat-pill">{{ avg_progress }}% overall</span>
+        </div>
+        <div class="progress progress-year" aria-label="Overall progress for age {{ year.age }}">
+          <div class="progress-track">
+            <div class="progress-fill" style="width: {{ avg_progress }}%;"></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if goals.size > 0 %}
+      <div class="goal-grid">
+        {% for goal in goals %}
+          {% assign status = goal.status | default: "not_started" %}
+          <article class="goal-card status-{{ status }}">
+            {% if goal.image %}
+              <div class="goal-photo">
+                {% if goal.link %}
+                  <a href="{{ goal.link }}">
+                    <img src="{{ goal.image | prepend: site.baseurl }}" alt="{{ goal.title }}">
+                  </a>
+                {% else %}
+                  <img src="{{ goal.image | prepend: site.baseurl }}" alt="{{ goal.title }}">
+                {% endif %}
+              </div>
+            {% endif %}
+            <div class="goal-body">
+              <div class="goal-head">
+                {% if goal.link %}
+                  <h3><a href="{{ goal.link }}">{{ goal.title }}</a></h3>
+                {% else %}
+                  <h3>{{ goal.title }}</h3>
+                {% endif %}
+                <span class="goal-status">{{ status | replace: "_", " " }}</span>
+              </div>
+              {% if goal.description %}
+                <p class="goal-desc">{{ goal.description }}</p>
+              {% endif %}
+              <div class="progress" aria-label="{{ goal.progress }}% complete">
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: {{ goal.progress | default: 0 }}%;"></div>
+                </div>
+                <span class="progress-label">{{ goal.progress | default: 0 }}%</span>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="goal-empty">Goals for this year are on the way. Check back soon.</p>
+    {% endif %}
+  </section>
+{% endfor %}
