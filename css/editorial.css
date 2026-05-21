@@ -103,18 +103,20 @@
   }
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(300px, 1.05fr) minmax(340px, 1fr);
+    grid-template-columns: minmax(380px, 1.4fr) minmax(300px, 0.95fr);
     gap: clamp(32px, 5vw, 56px);
     align-items: center;
   }
   .hero-visual {
     position: relative;
     width: 100%;
+    min-height: min(520px, 58vh);
   }
   .hero-photo {
     margin: 0;
     width: 100%;
-    aspect-ratio: 5 / 4;
+    min-height: min(520px, 58vh);
+    aspect-ratio: 4 / 5;
     border: 1px solid var(--rule);
     border-radius: 8px;
     overflow: hidden;
@@ -132,7 +134,15 @@
   }
   .hero .stickers {
     position: absolute;
-    inset: 0;
+    top: 6%;
+    bottom: 6%;
+    left: 36%;
+    right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 14px;
     pointer-events: none;
     z-index: 2;
   }
@@ -211,7 +221,8 @@
   .currently .where { font-family: var(--mono); font-size: 12px; color: var(--terra); }
 
   .sticker {
-    position: absolute;
+    position: relative;
+    flex-shrink: 0;
     background: var(--paper);
     border: 1px solid var(--rule);
     padding: 14px 16px;
@@ -219,7 +230,8 @@
     font-size: 12px;
     line-height: 1.4;
     box-shadow: 0 8px 24px -12px rgba(60,40,20,0.18), 0 2px 0 rgba(60,40,20,0.06);
-    max-width: 200px;
+    max-width: min(220px, 100%);
+    width: max-content;
     pointer-events: auto;
     transition: transform .3s cubic-bezier(.2,.8,.2,1);
   }
@@ -239,16 +251,21 @@
   .sticker p { color: var(--ink-2); font-size: 13px; line-height: 1.45; }
   .sticker .hand { font-family: var(--hand); font-size: 18px; color: var(--terra); display: block; margin-top: 4px; }
 
-  /* Stickers sit on the tree side (right half of the photo) */
-  .sticker.s1 { top: 6%; right: 3%; left: auto; transform: rotate(3deg); }
-  .sticker.s2 { top: 36%; right: 8%; left: auto; transform: rotate(-4deg); }
-  .sticker.s3 { top: 64%; right: 2%; left: auto; transform: rotate(2deg); }
+  /* Stickers on tree side — flex stack prevents overlap */
+  .sticker.s1 { transform: rotate(3deg); align-self: flex-end; }
+  .sticker.s2 { transform: rotate(-4deg); align-self: center; margin-right: 8px; }
+  .sticker.s3 { transform: rotate(2deg); align-self: flex-end; }
   @media (max-width: 980px) {
     .hero-grid {
       grid-template-columns: 1fr;
       gap: 40px;
     }
-    .hero-visual { max-width: 520px; margin: 0 auto; }
+    .hero-visual {
+      max-width: 560px;
+      min-height: 480px;
+      margin: 0 auto;
+    }
+    .hero-photo { min-height: 480px; }
     .hero-copy { text-align: left; }
     .hero h1 { font-size: clamp(56px, 13vw, 120px); }
     .hero .lede { max-width: none; }
