@@ -34,20 +34,20 @@
         }
       });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-photo').forEach(function (el) {
+    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-visual').forEach(function (el) {
       el.classList.add('reveal');
       io.observe(el);
     });
 
-    const hero = document.querySelector('.hero');
+    const heroVisual = document.querySelector('.hero-visual');
     const stickers = document.querySelectorAll('.sticker');
-    if (hero && stickers.length) {
+    if (heroVisual && stickers.length) {
       var rafId = null;
-      hero.addEventListener('mousemove', function (e) {
+      heroVisual.addEventListener('mousemove', function (e) {
         if (rafId) return;
         rafId = requestAnimationFrame(function () {
           rafId = null;
-          var r = hero.getBoundingClientRect();
+          var r = heroVisual.getBoundingClientRect();
           var x = (e.clientX - r.left) / r.width - 0.5;
           var y = (e.clientY - r.top) / r.height - 0.5;
           stickers.forEach(function (s, i) {
@@ -59,7 +59,7 @@
       });
     }
   } else {
-    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-photo').forEach(function (el) {
+    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-visual').forEach(function (el) {
       el.classList.add('reveal', 'in');
     });
   }
