@@ -1,15 +1,117 @@
-# Birthday goals — edit this file to update the site.
-# Fields per goal:
-#   title (required)
-#   description (optional)
-#   progress: 0–100
-#   status: done | in_progress | not_started
-#   image: optional, e.g. /img/goals/33/slug.jpg
-#   link: optional URL to a project or post
-# Do not add "suggested by" names.
+# Birthday goals — edit progress/status as you go. No advisor names on the public site.
 
 years:
   - age: 33
     title: "Goals for 33"
-    lede: "Every birthday I set as many goals as my new age—33 goals for turning 33. Progress bars and photos update as I go."
-    goals: []
+    tagline: "Quality over quantity. A big year deserves goals that meet it."
+    started: "April 5, 2026"
+    review: "April 5, 2027"
+    categories:
+      - section: "Internal"
+        name: "Body"
+        goals:
+          - number: 1
+            title: "Swim 500 yards continuously"
+            description: "Target April 2027. Training in two phases—before birth (May–Sept 2026, maintenance) and after postpartum recovery (Nov 2026–April 2027, build). Pause during birth and 6–8 weeks postpartum is planned and expected."
+            progress: 5
+            status: in_progress
+          - number: 2
+            title: "Start a consistent strength training practice"
+            description: "Even two days a week. The habit built now pays dividends for decades, especially as a woman."
+            progress: 0
+            status: not_started
+
+      - section: "Internal"
+        name: "Voice"
+        goals:
+          - number: 3
+            title: "Build a healthcare landscape map"
+            description: "Already started with weekly AI healthcare trend summaries. This year, turn that into a living document of the players, the gaps, and the intersections."
+            progress: 20
+            status: in_progress
+          - number: 4
+            title: "Reassess leadership style every 90 days in the new job"
+            description: "Returning to engineering management after a chapter that deepened my values. Schedule it like a meeting—don't let the pace of work erode what I learned."
+            progress: 0
+            status: not_started
+          - number: 5
+            title: "Publish one meaningful update to the CHC search tool"
+            description: "Ship one concrete improvement that moves it closer to actually helping people."
+            progress: 10
+            status: in_progress
+            link: "https://satoesakuma.com/community-health-center-search/"
+            image: /img/portfolio/community-health-center-search.png
+          - number: 6
+            title: "Join Toastmasters and deliver 3 speeches"
+            description: "Real reps, real audience, real discomfort. Build this before September while you still have the bandwidth."
+            progress: 0
+            status: not_started
+
+      - section: "Internal"
+        name: "Mind"
+        goals:
+          - number: 7
+            title: "Read 5 books — at least 2 across new fields"
+            description: "History, biography, science, fiction. Pattern recognition across disciplines compounds quietly but dramatically."
+            progress: 20
+            status: in_progress
+          - number: 8
+            title: "Build one personal AI tool you actually use weekly"
+            description: "Pick one from your Obsidian agent or CHC infrastructure ideas and get it to daily-life level, not just prototype."
+            progress: 0
+            status: not_started
+          - number: 9
+            title: "Do 3 puzzles"
+            description: "Kept from the list at 32. Still counts."
+            progress: 0
+            status: not_started
+          - number: 10
+            title: "Try 5 new foods"
+            description: "Kept from 32. Still counts."
+            progress: 0
+            status: not_started
+
+      - section: "External"
+        name: "People"
+        goals:
+          - number: 11
+            title: "Mail 12 letters — one a month"
+            description: "One a month is a practice, not a task."
+            progress: 0
+            status: not_started
+          - number: 12
+            title: "Interview 3 people about parenthood before the baby arrives"
+            description: "People whose version of parenting you admire. Record it or take notes—you'll want it later, and so might your kid someday."
+            progress: 0
+            status: not_started
+          - number: 13
+            title: "Begin volunteering at hospice"
+            description: "Not a number. Show up for someone for as long as they need it."
+            progress: 0
+            status: not_started
+
+      - section: "External"
+        name: "Money"
+        goals:
+          - number: 14
+            title: "Automate savings so money moves without willpower"
+            description: "HYSA transfer, loan payment, and investing all on autopilot by July. Set it up once, let it run—the goal is done when money moves without you having to decide."
+            progress: 0
+            status: not_started
+          - number: 15
+            title: "Read one investing book and make 5 intentional Robinhood trades"
+            description: "Framework first, then trades that feel intentional, not lucky. Currently reading The Intelligent Investor by Ben Graham."
+            progress: 15
+            status: in_progress
+
+    seasons:
+      - title: "All year (with a pause) — Body #1 Swimming"
+        body: "May → Sept maintenance. Sept → Nov pause for birth and postpartum (6–8 weeks). Nov 2026 → Apr 2027 build phase toward 500 yards in April 2027."
+      - title: "Season 1 — Spring Launch (Apr → Jun)"
+        body: "Grad school wrapping up, new job starting. Toastmasters + first speech, financial setup, healthcare landscape map, April–June letters."
+      - title: "Season 2 — Summer (Jun → Aug)"
+        body: "New job first 90 days, baby ~10 weeks away. First leadership reassessment, all 3 parenting interviews before September, push swimming before birth, June–August letters."
+      - title: "Season 3 — Fall Baby Season (Sep → Nov)"
+        body: "Give yourself almost nothing—a newborn is the goal. Short letters still count, gentle postpartum movement when cleared, hospice if already started. Everything else paused, no guilt."
+      - title: "Season 4 — Winter Settle In (Dec → Apr)"
+        body: "Second leadership reassessment, ship CHC update, personal AI tool, puzzles, reading season, 5 trades, back in the pool."
