@@ -509,6 +509,7 @@
     cursor: pointer;
     position: relative;
   }
+  .proj.proj-static { cursor: default; }
   .proj:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -16px rgba(60,40,20,0.25); }
   .proj:hover .proj-img { transform: scale(1.03); }
 
