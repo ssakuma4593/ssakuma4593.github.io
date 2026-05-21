@@ -34,7 +34,7 @@
         }
       });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker').forEach(function (el) {
+    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-photo').forEach(function (el) {
       el.classList.add('reveal');
       io.observe(el);
     });
@@ -59,7 +59,7 @@
       });
     }
   } else {
-    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker').forEach(function (el) {
+    document.querySelectorAll('.section, .stop, .proj, .else-card, .sticker, .hero-photo').forEach(function (el) {
       el.classList.add('reveal', 'in');
     });
   }
