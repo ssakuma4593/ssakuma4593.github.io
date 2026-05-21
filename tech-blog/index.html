@@ -1,11 +1,19 @@
 ---
-layout: default
+layout: page
 title: Tech Blog
+description: Archive of technical projects and writing.
+permalink: /tech-blog/
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<div class="eyebrow">Archive</div>
+<h1>Tech Blog</h1>
+<p class="subpage-lede">Older project write-ups from the portfolio archive.</p>
+
+<ul class="content" style="list-style: none; margin: 0; padding: 0;">
+  {% for post in site.posts %}
+    <li style="padding: 14px 0; border-bottom: 1px dashed var(--rule);">
+      <span style="font-family: var(--mono); font-size: 11px; color: var(--ink-3); display: block; margin-bottom: 4px;">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <a href="{{ post.url | prepend: site.baseurl }}" style="font-family: var(--serif); font-size: 22px;">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
