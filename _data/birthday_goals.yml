@@ -6,16 +6,17 @@ years:
     tagline: "Quality over quantity. A big year deserves goals that meet it."
     started: "April 5, 2026"
     review: "April 5, 2027"
-    last_checkin: "May 21, 2026"
+    last_checkin: "May 29, 2026"
     categories:
       - section: "Internal"
         name: "Body"
         goals:
           - number: 1
             title: "Swim 500 yards continuously"
-            description: "At 25 yards so far—swimming at the YMCA and working on breathing. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
-            progress: 5
+            description: "At 25 yards so far—signed up for private swim lessons at the MAC while Harvard membership still lets me go. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
+            progress: 15
             status: in_progress
+            image: /img/goals/33/mac-swim-lessons.png
           - number: 2
             title: "Start a consistent strength training practice"
             description: "Even two days a week. The habit built now pays dividends for decades, especially as a woman."
@@ -65,13 +66,14 @@ years:
             status: in_progress
           - number: 9
             title: "Do 3 puzzles"
-            description: "Started 1 of 3."
-            progress: 15
+            description: "Finished Pandora's Promise (1,000 pieces, TED Games) with my dad and brother while they were here for graduation—1 of 3 done."
+            progress: 33
             status: in_progress
+            image: /img/goals/33/pandoras-promise-puzzle.png
           - number: 10
             title: "Try 5 new foods"
-            description: "Tried spicy black cod at Nari in Midtown NY—1 of 5 down."
-            progress: 20
+            description: "3 of 5: spicy black cod at Nari (Midtown NY); fried cabbage pancake my mom made; abalone porridge at Koreana."
+            progress: 60
             status: in_progress
             image: /img/goals/33/nari-spicy-black-cod.png
             image_fit: contain
@@ -91,7 +93,7 @@ years:
             status: not_started
           - number: 13
             title: "Begin volunteering at hospice"
-            description: "Starting with a Korean family in Somerville—first visit tomorrow."
+            description: "Matched with a Korean family in Somerville—on pause for now. They wanted a caretaker at home while both were away; as a volunteer I cannot do personal care. Will reconnect when timing works."
             progress: 5
             status: in_progress
 
