@@ -1,0 +1,36 @@
+---
+layout: page
+---
+
+{% assign goal = nil %}
+{% assign year_data = nil %}
+{% assign goal_category = "" %}
+{% assign goal_section = "" %}
+
+{% for year in site.data.birthday_goals.years %}
+  {% if year.age == page.year %}
+    {% assign year_data = year %}
+    {% if year.categories %}
+      {% for cat in year.categories %}
+        {% for g in cat.goals %}
+          {% if g.number == page.number %}
+            {% assign goal = g %}
+            {% assign goal_category = cat.name %}
+            {% assign goal_section = cat.section %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if goal %}
+  {% include goal-detail.html
+    goal=goal
+    year=year_data
+    category=goal_category
+    section=goal_section
+  %}
+{% else %}
+  <p class="goal-empty">Goal not found. <a href="{{ '/birthday-goals/' | prepend: site.baseurl }}">Back to birthday goals</a></p>
+{% endif %}

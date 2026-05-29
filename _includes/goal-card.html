@@ -1,39 +1,31 @@
 {% assign status = include.goal.status | default: "not_started" %}
-<article class="goal-card status-{{ status }}">
-  {% if include.goal.image %}
-    <div class="goal-photo{% if include.goal.image_fit %} goal-photo--{{ include.goal.image_fit }}{% endif %}">
-      {% if include.goal.link %}
-        <a href="{{ include.goal.link }}">
-          <img src="{{ include.goal.image | prepend: site.baseurl }}" alt="{{ include.goal.title }}">
-        </a>
-      {% else %}
+{% assign goal_url = '/birthday-goals/' | append: include.age | append: '/' | append: include.goal.number | append: '/' | prepend: site.baseurl %}
+
+<a href="{{ goal_url }}" class="goal-card-link">
+  <article class="goal-card status-{{ status }}">
+    {% if include.goal.image %}
+      <div class="goal-photo{% if include.goal.image_fit %} goal-photo--{{ include.goal.image_fit }}{% endif %}">
         <img src="{{ include.goal.image | prepend: site.baseurl }}" alt="{{ include.goal.title }}">
-      {% endif %}
-    </div>
-  {% endif %}
-  <div class="goal-body">
-    <div class="goal-head">
-      {% if include.goal.link %}
-        <h3>
-          {% if include.goal.number %}<span class="goal-num">{{ include.goal.number }}.</span>{% endif %}
-          <a href="{{ include.goal.link }}">{{ include.goal.title }}</a>
-        </h3>
-      {% else %}
+      </div>
+    {% endif %}
+    <div class="goal-body">
+      <div class="goal-head">
         <h3>
           {% if include.goal.number %}<span class="goal-num">{{ include.goal.number }}.</span>{% endif %}
           {{ include.goal.title }}
         </h3>
-      {% endif %}
-      <span class="goal-status">{{ status | replace: "_", " " }}</span>
-    </div>
-    {% if include.goal.description %}
-      <p class="goal-desc">{{ include.goal.description }}</p>
-    {% endif %}
-    <div class="progress" aria-label="{{ include.goal.progress }}% complete">
-      <div class="progress-track">
-        <div class="progress-fill" style="width: {{ include.goal.progress | default: 0 }}%;"></div>
+        <span class="goal-status">{{ status | replace: "_", " " }}</span>
       </div>
-      <span class="progress-label">{{ include.goal.progress | default: 0 }}%</span>
+      {% if include.goal.description %}
+        <p class="goal-desc">{{ include.goal.description }}</p>
+      {% endif %}
+      <div class="progress" aria-label="{{ include.goal.progress }}% complete">
+        <div class="progress-track">
+          <div class="progress-fill" style="width: {{ include.goal.progress | default: 0 }}%;"></div>
+        </div>
+        <span class="progress-label">{{ include.goal.progress | default: 0 }}%</span>
+      </div>
+      <span class="goal-card-more">View updates →</span>
     </div>
-  </div>
-</article>
+  </article>
+</a>

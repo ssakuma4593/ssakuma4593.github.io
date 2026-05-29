@@ -1,4 +1,5 @@
 # Birthday goals — edit progress/status as you go. No advisor names on the public site.
+# Add check-ins under updates: (newest first). Run: ruby scripts/generate_goal_pages.rb
 
 years:
   - age: 33
@@ -17,11 +18,26 @@ years:
             progress: 15
             status: in_progress
             image: /img/goals/33/mac-swim-lessons.png
+            updates:
+              - date: "May 29, 2026"
+                note: "Signed up for private swim lessons at the MAC while Harvard membership still lets me go."
+                image: /img/goals/33/mac-swim-lessons.png
+                progress: 15
+              - date: "May 21, 2026"
+                note: "At 25 yards so far—swimming at the YMCA and working on breathing."
+                progress: 5
+              - date: "April 5, 2026"
+                note: "Goal set. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
+                progress: 0
           - number: 2
             title: "Start a consistent strength training practice"
             description: "Even two days a week. The habit built now pays dividends for decades, especially as a woman."
             progress: 0
             status: not_started
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—aiming for even two days a week."
+                progress: 0
 
       - section: "Internal"
         name: "Voice"
@@ -31,11 +47,22 @@ years:
             description: "In progress—building on it every week with AI healthcare trend summaries, turning into a living map of players, gaps, and intersections."
             progress: 10
             status: in_progress
+            updates:
+              - date: "May 21, 2026"
+                note: "Building on it every week with AI healthcare trend summaries—turning into a living map of players, gaps, and intersections."
+                progress: 10
+              - date: "April 5, 2026"
+                note: "Goal set."
+                progress: 0
           - number: 4
             title: "Reassess leadership style every 90 days in the new job"
             description: "Returning to engineering management after a chapter that deepened my values. Schedule it like a meeting—don't let the pace of work erode what I learned."
             progress: 0
             status: not_started
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—first 90-day reassessment to schedule once the new job rhythm settles."
+                progress: 0
           - number: 5
             title: "Publish one meaningful update to the CHC search tool"
             description: "Ship one concrete improvement that moves it closer to actually helping people."
@@ -43,11 +70,22 @@ years:
             status: not_started
             link: "https://satoesakuma.com/community-health-center-search/"
             image: /img/portfolio/community-health-center-search.png
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—one concrete improvement that moves the CHC search tool closer to actually helping people."
+                progress: 0
           - number: 6
             title: "Join Toastmasters and deliver 3 speeches"
             description: "Not started yet—first meeting June 2, 2026. Real reps, real audience, real discomfort; build before September while bandwidth allows."
             progress: 5
             status: in_progress
+            updates:
+              - date: "May 21, 2026"
+                note: "First meeting scheduled for June 2, 2026."
+                progress: 5
+              - date: "April 5, 2026"
+                note: "Goal set—join Toastmasters and deliver 3 speeches before September while bandwidth allows."
+                progress: 0
 
       - section: "Internal"
         name: "Mind"
@@ -59,17 +97,44 @@ years:
             status: in_progress
             image: /img/goals/33/make-time.png
             image_fit: contain
+            updates:
+              - date: "May 21, 2026"
+                note: "Reading Make Time—1 of 5."
+                image: /img/goals/33/make-time.png
+                image_fit: contain
+                progress: 20
+              - date: "April 5, 2026"
+                note: "Goal set—5 books, at least 2 across new fields."
+                progress: 0
           - number: 8
             title: "Build one personal AI tool you actually use weekly"
             description: "Building a second brain that acts as my executive assistant—reachable from my phone. About 20% there."
             progress: 20
             status: in_progress
+            updates:
+              - date: "May 21, 2026"
+                note: "Building a second brain that acts as my executive assistant—reachable from my phone. About 20% there."
+                progress: 20
+              - date: "April 5, 2026"
+                note: "Goal set."
+                progress: 0
           - number: 9
             title: "Do 3 puzzles"
             description: "Finished Pandora's Promise (1,000 pieces, TED Games) with my dad and brother while they were here for graduation—1 of 3 done."
             progress: 33
             status: in_progress
             image: /img/goals/33/pandoras-promise-puzzle.png
+            updates:
+              - date: "May 29, 2026"
+                note: "Finished Pandora's Promise (1,000 pieces, TED Games) with my dad and brother while they were here for graduation—1 of 3 done."
+                image: /img/goals/33/pandoras-promise-puzzle.png
+                progress: 33
+              - date: "May 21, 2026"
+                note: "Started first puzzle."
+                progress: 15
+              - date: "April 5, 2026"
+                note: "Goal set—3 puzzles this year."
+                progress: 0
           - number: 10
             title: "Try 5 new foods"
             description: "3 of 5: spicy black cod at Nari (Midtown NY); fried cabbage pancake my mom made; abalone porridge at Koreana."
@@ -77,6 +142,18 @@ years:
             status: in_progress
             image: /img/goals/33/nari-spicy-black-cod.png
             image_fit: contain
+            updates:
+              - date: "May 29, 2026"
+                note: "3 of 5—fried cabbage pancake my mom made; abalone porridge at Koreana."
+                progress: 60
+              - date: "May 21, 2026"
+                note: "Tried spicy black cod at Nari in Midtown NY—1 of 5."
+                image: /img/goals/33/nari-spicy-black-cod.png
+                image_fit: contain
+                progress: 20
+              - date: "April 5, 2026"
+                note: "Goal set—5 new foods this year."
+                progress: 0
 
       - section: "External"
         name: "People"
@@ -86,16 +163,40 @@ years:
             description: "April: birthday cards. May: birthday cards and postcards. One a month is a practice, not a task."
             progress: 17
             status: in_progress
+            updates:
+              - date: "May 21, 2026"
+                note: "May: birthday cards and postcards."
+                progress: 17
+              - date: "April 30, 2026"
+                note: "April: birthday cards."
+                progress: 8
+              - date: "April 5, 2026"
+                note: "Goal set—one letter a month, all year."
+                progress: 0
           - number: 12
             title: "Interview 3 people about parenthood before the baby arrives"
             description: "People whose version of parenting you admire. Record it or take notes—you'll want it later, and so might your kid someday."
             progress: 0
             status: not_started
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—interview 3 people whose version of parenting I admire."
+                progress: 0
           - number: 13
             title: "Begin volunteering at hospice"
             description: "Matched with a Korean family in Somerville—on pause for now. They wanted a caretaker at home while both were away; as a volunteer I cannot do personal care. Will reconnect when timing works."
             progress: 5
             status: in_progress
+            updates:
+              - date: "May 29, 2026"
+                note: "On pause—the family wanted a caretaker at home while both were away; as a volunteer I cannot do personal care. Will reconnect when timing works."
+                progress: 5
+              - date: "May 21, 2026"
+                note: "Matched with a Korean family in Somerville—first visit scheduled."
+                progress: 5
+              - date: "April 5, 2026"
+                note: "Goal set—begin volunteering at hospice."
+                progress: 0
 
       - section: "External"
         name: "Money"
@@ -105,8 +206,16 @@ years:
             description: "HYSA transfer, loan payment, and investing all on autopilot by July. Set it up once, let it run—the goal is done when money moves without you having to decide."
             progress: 0
             status: not_started
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—HYSA transfer, loan payment, and investing on autopilot by July."
+                progress: 0
           - number: 15
             title: "Read one investing book and make 5 intentional Robinhood trades"
             description: "Waiting to pick up The Intelligent Investor at the library. Framework first, then five trades that feel intentional, not lucky."
             progress: 0
             status: not_started
+            updates:
+              - date: "April 5, 2026"
+                note: "Goal set—read The Intelligent Investor, then five intentional trades."
+                progress: 0

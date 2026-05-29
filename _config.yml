@@ -9,3 +9,5 @@ permalink: /tech-blog/:year/:month/:day/:title
 collections:
   reflections:
     output: false
+  goal_pages:
+    output: true

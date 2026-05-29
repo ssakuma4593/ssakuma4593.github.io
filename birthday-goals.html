@@ -7,7 +7,7 @@ permalink: /birthday-goals/
 
 <div class="eyebrow">Life</div>
 <h1>Birthday goals</h1>
-<p class="subpage-lede">Some years I set one goal per year of life; other years—like 33—I go for fewer goals that actually match the year. Progress bars and photos update as I go.</p>
+<p class="subpage-lede">Some years I set one goal per year of life; other years—like 33—I go for fewer goals that actually match the year. Click any card to see past check-ins and photos.</p>
 
 {% assign years = site.data.birthday_goals.years | sort: "age" | reverse %}
 
@@ -76,14 +76,14 @@ permalink: /birthday-goals/
         <h4 class="goal-category-label">{{ cat.name }}</h4>
         <div class="goal-grid">
           {% for goal in cat.goals %}
-            {% include goal-card.html goal=goal %}
+            {% include goal-card.html goal=goal age=year.age %}
           {% endfor %}
         </div>
       {% endfor %}
     {% elsif year.goals.size > 0 %}
       <div class="goal-grid">
         {% for goal in year.goals %}
-          {% include goal-card.html goal=goal %}
+          {% include goal-card.html goal=goal age=year.age %}
         {% endfor %}
       </div>
     {% else %}
