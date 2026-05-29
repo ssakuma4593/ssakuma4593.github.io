@@ -1,5 +1,6 @@
 # Birthday goals — edit progress/status as you go. No advisor names on the public site.
-# Add check-ins under updates: (newest first). Run: ruby scripts/generate_goal_pages.rb
+# Add check-ins under updates: (newest first). Top-level description/progress/image are for the index card only.
+# Run: ruby scripts/generate_goal_pages.rb after adding or removing goals.
 
 years:
   - age: 33

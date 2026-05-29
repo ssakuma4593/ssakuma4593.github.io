@@ -1,5 +1,4 @@
 {% assign status = include.goal.status | default: "not_started" %}
-{% assign goal_url = '/birthday-goals/' | append: include.year.age | append: '/' | append: include.goal.number | append: '/' %}
 
 <p class="goal-back">
   <a href="{{ '/birthday-goals/' | prepend: site.baseurl }}#age-{{ include.year.age }}">← Birthday goals</a>
@@ -28,25 +27,18 @@
   {% endif %}
 </header>
 
-{% if include.goal.description %}
-  <section class="goal-detail-current">
-    <h2 class="goal-detail-label">Current</h2>
-    <p>{{ include.goal.description }}</p>
-    {% if include.goal.image %}
-      <figure class="goal-detail-hero{% if include.goal.image_fit %} goal-detail-hero--{{ include.goal.image_fit }}{% endif %}">
-        <img src="{{ include.goal.image | prepend: site.baseurl }}" alt="{{ include.goal.title }}">
-      </figure>
-    {% endif %}
-  </section>
-{% endif %}
-
 <section class="goal-detail-history">
   <h2 class="goal-detail-label">Updates</h2>
   {% if include.goal.updates and include.goal.updates.size > 0 %}
     <ol class="goal-timeline">
       {% for update in include.goal.updates %}
-        <li class="goal-timeline-item">
-          <time class="goal-timeline-date" datetime="{{ update.date }}">{{ update.date }}</time>
+        <li class="goal-timeline-item{% if forloop.first %} goal-timeline-item--latest{% endif %}">
+          <div class="goal-timeline-head">
+            <time class="goal-timeline-date" datetime="{{ update.date }}">{{ update.date }}</time>
+            {% if forloop.first %}
+              <span class="goal-timeline-badge">Latest</span>
+            {% endif %}
+          </div>
           <p class="goal-timeline-note">{{ update.note }}</p>
           {% if update.progress %}
             <p class="goal-timeline-progress">{{ update.progress }}% at this check-in</p>
@@ -59,7 +51,21 @@
         </li>
       {% endfor %}
     </ol>
+  {% elsif include.goal.description %}
+    <ol class="goal-timeline">
+      <li class="goal-timeline-item goal-timeline-item--latest">
+        <div class="goal-timeline-head">
+          <span class="goal-timeline-badge">Latest</span>
+        </div>
+        <p class="goal-timeline-note">{{ include.goal.description }}</p>
+        {% if include.goal.image %}
+          <figure class="goal-timeline-photo{% if include.goal.image_fit %} goal-timeline-photo--{{ include.goal.image_fit }}{% endif %}">
+            <img src="{{ include.goal.image | prepend: site.baseurl }}" alt="">
+          </figure>
+        {% endif %}
+      </li>
+    </ol>
   {% else %}
-    <p class="goal-timeline-empty">No check-ins yet beyond the current note above.</p>
+    <p class="goal-timeline-empty">No check-ins yet.</p>
   {% endif %}
 </section>
