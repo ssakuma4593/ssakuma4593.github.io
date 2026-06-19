@@ -35,10 +35,13 @@ years:
                 progress: 0
           - number: 2
             title: "Start a consistent strength training practice"
-            description: "Even two days a week. The habit built now pays dividends for decades, especially as a woman."
-            progress: 0
-            status: not_started
+            description: "Started—went once on Monday. The habit built now pays dividends for decades, especially as a woman."
+            progress: 10
+            status: in_progress
             updates:
+              - date: "June 19, 2026"
+                note: "Went to strength training for the first time on Monday."
+                progress: 10
               - date: "April 5, 2026"
                 note: "Goal set—aiming for even two days a week."
                 progress: 0
@@ -99,12 +102,17 @@ years:
         goals:
           - number: 7
             title: "Read 5 books — at least 2 across new fields"
-            description: "In progress: Make Time (1 of 5). History, biography, science, fiction—pattern recognition across disciplines compounds quietly."
-            progress: 20
+            description: "In progress: Make Time, then Red Rising (2 of 5)—sci-fi, a new field. History, biography, science, fiction—pattern recognition across disciplines compounds quietly."
+            progress: 40
             status: in_progress
-            image: /img/goals/33/make-time.png
+            image: /img/goals/33/red-rising.jpg
             image_fit: contain
             updates:
+              - date: "June 19, 2026"
+                note: "Finished Red Rising—2 of 5, and a new field (sci-fi)."
+                image: /img/goals/33/red-rising.jpg
+                image_fit: contain
+                progress: 40
               - date: "May 21, 2026"
                 note: "Reading Make Time—1 of 5."
                 image: /img/goals/33/make-time.png
@@ -224,10 +232,13 @@ years:
                 progress: 0
           - number: 15
             title: "Read one investing book and make 5 intentional Robinhood trades"
-            description: "Waiting to pick up The Intelligent Investor at the library. Framework first, then five trades that feel intentional, not lucky."
-            progress: 0
-            status: not_started
+            description: "Started reading The Intelligent Investor. Framework first, then five trades that feel intentional, not lucky."
+            progress: 5
+            status: in_progress
             updates:
+              - date: "June 19, 2026"
+                note: "Started reading The Intelligent Investor."
+                progress: 5
               - date: "April 5, 2026"
                 note: "Goal set—read The Intelligent Investor, then five intentional trades."
                 progress: 0
