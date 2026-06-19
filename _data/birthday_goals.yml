@@ -8,18 +8,21 @@ years:
     tagline: "Quality over quantity. A big year deserves goals that meet it."
     started: "April 5, 2026"
     review: "April 5, 2027"
-    last_checkin: "May 29, 2026"
+    last_checkin: "June 19, 2026"
     categories:
       - section: "Internal"
         name: "Body"
         goals:
           - number: 1
             title: "Swim 500 yards continuously"
-            description: "At 25 yards so far—signed up for private swim lessons at the MAC while Harvard membership still lets me go. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
-            progress: 15
+            description: "At 75 yards continuously now—up from 25. The private swim lessons at the MAC are paying off. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
+            progress: 25
             status: in_progress
             image: /img/goals/33/mac-swim-lessons.png
             updates:
+              - date: "June 19, 2026"
+                note: "Can now swim 75 yards without stopping—up from 25. The private lessons at the MAC are paying off."
+                progress: 25
               - date: "May 29, 2026"
                 note: "Signed up for private swim lessons at the MAC while Harvard membership still lets me go."
                 image: /img/goals/33/mac-swim-lessons.png
@@ -77,10 +80,13 @@ years:
                 progress: 0
           - number: 6
             title: "Join Toastmasters and deliver 3 speeches"
-            description: "Not started yet—first meeting June 2, 2026. Real reps, real audience, real discomfort; build before September while bandwidth allows."
-            progress: 5
+            description: "1 of 3 delivered—went to my first meeting June 9, 2026, and gave my first 2-minute speech. Real reps, real audience, real discomfort; build before September while bandwidth allows."
+            progress: 40
             status: in_progress
             updates:
+              - date: "June 9, 2026"
+                note: "Went to my first Toastmasters meeting and gave my first 2-minute speech—on who was better, Mr. Rogers or Robin Williams. 1 of 3 delivered."
+                progress: 40
               - date: "May 21, 2026"
                 note: "First meeting scheduled for June 2, 2026."
                 progress: 5
