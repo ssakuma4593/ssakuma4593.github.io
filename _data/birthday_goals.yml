@@ -167,10 +167,15 @@ years:
         goals:
           - number: 11
             title: "Mail 12 letters — one a month"
-            description: "April: birthday cards. May: birthday cards and postcards. One a month is a practice, not a task."
-            progress: 17
+            description: "June: thank-you cards for everyone who helped me get through Harvard. April: birthday cards. May: birthday cards and postcards. One a month is a practice, not a task."
+            progress: 25
             status: in_progress
+            image: /img/goals/33/harvard-thank-you-cards.jpeg
             updates:
+              - date: "June 19, 2026"
+                note: "June: thank-you cards for everyone who helped me get through Harvard."
+                image: /img/goals/33/harvard-thank-you-cards.jpeg
+                progress: 25
               - date: "May 21, 2026"
                 note: "May: birthday cards and postcards."
                 progress: 17
