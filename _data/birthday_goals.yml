@@ -15,11 +15,15 @@ years:
         goals:
           - number: 1
             title: "Swim 500 yards continuously"
-            description: "At 75 yards continuously now—up from 25. The private swim lessons at the MAC are paying off. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
-            progress: 25
+            description: "At 100 yards continuously now—up from 75. The private swim lessons at the MAC are paying off. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
+            progress: 35
             status: in_progress
-            image: /img/goals/33/mac-swim-lessons.png
+            image: /img/goals/33/swim-100-yards.jpg
             updates:
+              - date: "July 18, 2026"
+                note: "Can now swim 100 yards without stopping—up from 75. The private lessons at the MAC are paying off."
+                image: /img/goals/33/swim-100-yards.jpg
+                progress: 35
               - date: "June 19, 2026"
                 note: "Can now swim 75 yards without stopping—up from 25. The private lessons at the MAC are paying off."
                 progress: 25
