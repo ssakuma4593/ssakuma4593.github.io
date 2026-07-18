@@ -102,12 +102,27 @@ years:
         goals:
           - number: 7
             title: "Read 5 books — at least 2 across new fields"
-            description: "In progress: Make Time, then Red Rising (2 of 5)—sci-fi, a new field. History, biography, science, fiction—pattern recognition across disciplines compounds quietly."
-            progress: 40
+            description: "In progress: reading James by Percival Everett—the 5th book of the year. Finished Make Time, Red Rising, Golden Son, and Dungeon Crawler Carl—new fields in sci-fi and LitRPG."
+            progress: 80
             status: in_progress
-            image: /img/goals/33/red-rising.jpg
+            image: /img/goals/33/james-percival-everett.jpg
             image_fit: contain
             updates:
+              - date: "July 18, 2026"
+                note: "Started James by Percival Everett—the 5th book of the year."
+                image: /img/goals/33/james-percival-everett.jpg
+                image_fit: contain
+                progress: 80
+              - date: "July 18, 2026"
+                note: "Finished Dungeon Crawler Carl—4 of 5, another new field (LitRPG)."
+                image: /img/goals/33/dungeon-crawler-carl.jpg
+                image_fit: contain
+                progress: 80
+              - date: "July 11, 2026"
+                note: "Finished Golden Son, book two of the Red Rising trilogy—3 of 5."
+                image: /img/goals/33/golden-son.jpg
+                image_fit: contain
+                progress: 60
               - date: "June 19, 2026"
                 note: "Finished Red Rising—2 of 5, and a new field (sci-fi)."
                 image: /img/goals/33/red-rising.jpg
@@ -135,11 +150,23 @@ years:
                 progress: 0
           - number: 9
             title: "Do 3 puzzles"
-            description: "Finished Pandora's Promise (1,000 pieces, TED Games) with my dad and brother while they were here for graduation—1 of 3 done."
-            progress: 33
-            status: in_progress
-            image: /img/goals/33/pandoras-promise-puzzle.png
+            description: "Done! Pandora's Promise with my dad and brother, then two more 500-piece puzzles on July 4 and 5. Found out there's a 2-person team puzzle competition in September, so bought more puzzles to practice with."
+            progress: 100
+            status: done
+            image: /img/goals/33/puzzle-500-piece-jul5.jpg
             updates:
+              - date: "July 18, 2026"
+                note: "Found out there's a 2-person team puzzle competition in September, so bought more puzzles to practice with."
+                image: /img/goals/33/puzzles-bought-sept-competition.jpg
+                progress: 100
+              - date: "July 5, 2026"
+                note: "Finished a 500-piece puzzle—3 of 3 done!"
+                image: /img/goals/33/puzzle-500-piece-jul5.jpg
+                progress: 100
+              - date: "July 4, 2026"
+                note: "Finished a 500-piece puzzle—2 of 3."
+                image: /img/goals/33/puzzle-500-piece-jul4.jpg
+                progress: 66
               - date: "May 29, 2026"
                 note: "Finished Pandora's Promise (1,000 pieces, TED Games) with my dad and brother while they were here for graduation—1 of 3 done."
                 image: /img/goals/33/pandoras-promise-puzzle.png
