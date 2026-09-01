@@ -15,11 +15,15 @@ years:
         goals:
           - number: 1
             title: "Swim 500 yards continuously"
-            description: "At 100 yards continuously now—up from 75. The private swim lessons at the MAC are paying off. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
+            description: "At 100 yards continuously now, and 656 yards total with stops in a single session. The private swim lessons at the MAC are paying off. Target April 2027; maintenance through Sept, pause for birth/postpartum, then build Nov 2026–April 2027."
             progress: 35
             status: in_progress
-            image: /img/goals/33/swim-100-yards.jpg
+            image: /img/goals/33/swim-656yd-100-continuous.png
             updates:
+              - date: "September 1, 2026"
+                note: "656 yards total in one session (with stops), and think I'm holding 100 yards continuously now."
+                image: /img/goals/33/swim-656yd-100-continuous.png
+                progress: 35
               - date: "July 18, 2026"
                 note: "Can now swim 100 yards without stopping—up from 75. The private lessons at the MAC are paying off."
                 image: /img/goals/33/swim-100-yards.jpg
@@ -235,10 +239,15 @@ years:
                 progress: 0
           - number: 13
             title: "Begin volunteering at hospice"
-            description: "Matched with a Korean family in Somerville—on pause for now. They wanted a caretaker at home while both were away; as a volunteer I cannot do personal care. Will reconnect when timing works."
-            progress: 5
-            status: in_progress
+            description: "Done—volunteered 4 hours, 3 times at the Sawtelle house in Reading, assisting the nurse and aide with patient care: warming dinner, greeting guests, inventorying rooms, and cleaning shared spaces."
+            progress: 100
+            status: done
+            image: /img/goals/33/hospice-volunteer-badge.jpeg
             updates:
+              - date: "September 1, 2026"
+                note: "Volunteered 4 hours, 3 times at the Sawtelle house in Reading—assisted the nurse and aide with patient care by warming dinner, greeting guests, inventorying rooms, and cleaning shared spaces."
+                image: /img/goals/33/hospice-volunteer-badge.jpeg
+                progress: 100
               - date: "May 29, 2026"
                 note: "On pause—the family wanted a caretaker at home while both were away; as a volunteer I cannot do personal care. Will reconnect when timing works."
                 progress: 5
