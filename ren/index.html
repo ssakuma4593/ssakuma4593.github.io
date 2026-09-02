@@ -64,6 +64,7 @@ noindex: true
         var formattedDate = new Date(u.date + 'T00:00:00').toLocaleDateString('en-US', {
           month: 'long', day: 'numeric', year: 'numeric'
         });
+        var leadImageHtml = u.leadImage ? '<img src="' + u.leadImage + '" alt="" class="ren-photo ren-lead-photo">' : '';
         var imagesHtml = (u.images || []).map(function (src) {
           return '<img src="' + src + '" alt="" class="ren-photo">';
         }).join('');
@@ -74,7 +75,7 @@ noindex: true
               '<h5>' + escapeHtml(u.title) + '</h5>' +
               '<span class="date">' + formattedDate + '</span>' +
             '</button>' +
-            '<div id="' + id + '-content" class="reflection-body content">' + bodyToHtml(u.body || '') + imagesHtml + '</div>' +
+            '<div id="' + id + '-content" class="reflection-body content">' + leadImageHtml + bodyToHtml(u.body || '') + imagesHtml + '</div>' +
           '</div>'
         );
       }).join('');

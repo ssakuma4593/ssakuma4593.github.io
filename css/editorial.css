@@ -1429,9 +1429,14 @@
   .ren-photo {
     display: block;
     width: 100%;
-    max-width: 420px;
+    max-width: 640px;
     border-radius: 8px;
     margin-top: 16px;
+  }
+  .ren-lead-photo {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   @media (prefers-reduced-motion: reduce) {

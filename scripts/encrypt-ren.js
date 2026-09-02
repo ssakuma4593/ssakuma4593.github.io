@@ -19,12 +19,15 @@
 //         "date": "2026-09-01",
 //         "title": "First update",
 //         "body": "Text here.\n\nSecond paragraph.",
+//         "leadImage": "photos/hero-photo.jpg",
 //         "images": ["photos/some-photo.jpg"]
 //       }
 //     ]
 //   }
 //
-// "images" paths are relative to ren-content/. Images are never written
+// "leadImage" (optional, single) renders full-width above the text.
+// "images" (optional, array) render below the text. Both are paths
+// relative to ren-content/. Images are never written
 // anywhere public — this script reads them, inlines them as base64 data
 // URIs into the plaintext, and only the encrypted result goes to
 // ren/data.json. A plain /img/ path would bypass the password entirely,
@@ -53,8 +56,10 @@ function imageToDataUri(relPath) {
 
 function resolveImages(updates) {
   return updates.map((u) => {
-    if (!u.images || !u.images.length) return u;
-    return Object.assign({}, u, { images: u.images.map(imageToDataUri) });
+    const resolved = Object.assign({}, u);
+    if (u.leadImage) resolved.leadImage = imageToDataUri(u.leadImage);
+    if (u.images && u.images.length) resolved.images = u.images.map(imageToDataUri);
+    return resolved;
   });
 }
 
