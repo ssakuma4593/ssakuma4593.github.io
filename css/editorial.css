@@ -1426,6 +1426,7 @@
     color: var(--ink-3);
     font-style: italic;
   }
+  .subpage-main .ren-wide { max-width: none; }
   .ren-photo {
     display: block;
     width: 100%;
