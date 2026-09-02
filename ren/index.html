@@ -1,0 +1,143 @@
+---
+layout: page
+title: "Ren"
+description: "Personal updates."
+permalink: /ren/
+noindex: true
+---
+
+<div class="eyebrow">Private</div>
+<h1>Ren</h1>
+<p class="subpage-lede">Personal updates about Ren, for the people I've shared this link and password with.</p>
+
+<div class="content">
+  <div id="ren-gate" class="gate-box">
+    <label for="ren-password">Password</label>
+    <input type="password" id="ren-password" autocomplete="current-password" />
+    <button type="button" id="ren-unlock">Unlock</button>
+    <p id="ren-error" class="gate-error">Incorrect password. Try again.</p>
+  </div>
+
+  <div id="ren-updates" class="reflection-posts" style="display:none;"></div>
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'ren-updates-plaintext';
+
+  var gate = document.getElementById('ren-gate');
+  var updatesEl = document.getElementById('ren-updates');
+  var input = document.getElementById('ren-password');
+  var button = document.getElementById('ren-unlock');
+  var error = document.getElementById('ren-error');
+
+  function base64ToBytes(b64) {
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function bodyToHtml(body) {
+    return body
+      .split(/\n\s*\n/)
+      .map(function (para) { return '<p>' + escapeHtml(para).replace(/\n/g, '<br>') + '</p>'; })
+      .join('');
+  }
+
+  function render(data) {
+    var updates = (data.updates || []).slice().sort(function (a, b) {
+      return a.date < b.date ? 1 : -1;
+    });
+
+    if (!updates.length) {
+      updatesEl.innerHTML = '<p class="gate-empty">No updates yet.</p>';
+    } else {
+      updatesEl.innerHTML = updates.map(function (u, i) {
+        var id = 'ren-update-' + i;
+        var formattedDate = new Date(u.date + 'T00:00:00').toLocaleDateString('en-US', {
+          month: 'long', day: 'numeric', year: 'numeric'
+        });
+        var imagesHtml = (u.images || []).map(function (src) {
+          return '<img src="' + src + '" alt="" class="ren-photo">';
+        }).join('');
+        return (
+          '<div class="reflection-post">' +
+            '<button type="button" class="reflection-header" data-target="' + id + '" aria-expanded="false">' +
+              '<span class="toggle" id="' + id + '-icon" aria-hidden="true">▼</span>' +
+              '<h5>' + escapeHtml(u.title) + '</h5>' +
+              '<span class="date">' + formattedDate + '</span>' +
+            '</button>' +
+            '<div id="' + id + '-content" class="reflection-body content">' + bodyToHtml(u.body || '') + imagesHtml + '</div>' +
+          '</div>'
+        );
+      }).join('');
+    }
+
+    updatesEl.querySelectorAll('.reflection-header').forEach(function (header) {
+      header.addEventListener('click', function () {
+        var id = header.getAttribute('data-target');
+        var body = document.getElementById(id + '-content');
+        var icon = document.getElementById(id + '-icon');
+        var open = !body.classList.contains('open');
+        body.classList.toggle('open', open);
+        header.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (icon) icon.textContent = open ? '▲' : '▼';
+      });
+    });
+
+    gate.style.display = 'none';
+    updatesEl.style.display = '';
+  }
+
+  var cached = sessionStorage.getItem(STORAGE_KEY);
+  if (cached) {
+    try { render(JSON.parse(cached)); } catch (e) { sessionStorage.removeItem(STORAGE_KEY); }
+  }
+
+  async function unlock() {
+    var password = input.value;
+    if (!password) return;
+
+    button.disabled = true;
+    error.classList.remove('show');
+
+    try {
+      var res = await fetch('data.json');
+      var payload = await res.json();
+
+      var keyMaterial = await crypto.subtle.importKey(
+        'raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']
+      );
+      var key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: base64ToBytes(payload.salt), iterations: payload.iterations, hash: 'SHA-256' },
+        keyMaterial,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+      var plainBuf = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: base64ToBytes(payload.iv) },
+        key,
+        base64ToBytes(payload.ciphertext)
+      );
+      var json = new TextDecoder().decode(plainBuf);
+      sessionStorage.setItem(STORAGE_KEY, json);
+      render(JSON.parse(json));
+    } catch (e) {
+      error.classList.add('show');
+    } finally {
+      button.disabled = false;
+    }
+  }
+
+  button.addEventListener('click', unlock);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') unlock(); });
+})();
+</script>

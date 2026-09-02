@@ -7,3 +7,7 @@ vendor/
 *.gem
 node_modules/
 .DS_Store
+
+# Plaintext source for the private Ren updates page — never commit this.
+# Only the encrypted output (ren/data.json) is meant to be public.
+ren-content/

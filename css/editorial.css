@@ -1367,6 +1367,73 @@
     border-radius: 8px;
   }
 
+  /* private updates gate (Ren page) */
+  .gate-box {
+    max-width: 420px;
+    padding: 32px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+  }
+  .gate-box label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .gate-box input[type="password"] {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 16px;
+    padding: 11px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    background: var(--cream);
+    color: var(--ink);
+  }
+  .gate-box input[type="password"]:focus {
+    outline: none;
+    border-color: var(--terra);
+  }
+  .gate-box button {
+    margin-top: 14px;
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 11px 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--terra);
+    color: var(--paper);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .gate-box button:hover { background: var(--terra-deep); }
+  .gate-box button:disabled { opacity: 0.6; cursor: default; }
+  .gate-error {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--terra-deep);
+    display: none;
+  }
+  .gate-error.show { display: block; }
+  .gate-empty {
+    font-size: 16px;
+    color: var(--ink-3);
+    font-style: italic;
+  }
+  .ren-photo {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal { opacity: 1; transform: none; transition: none; }
