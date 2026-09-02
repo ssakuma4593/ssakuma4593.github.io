@@ -1430,9 +1430,9 @@
   .ren-photo {
     display: block;
     width: 100%;
-    max-width: 640px;
+    max-width: 820px;
+    margin: 16px auto 0;
     border-radius: 8px;
-    margin-top: 16px;
   }
   .ren-lead-photo {
     max-width: 100%;
